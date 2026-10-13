@@ -201,7 +201,7 @@
                 <p>Have a question, want to support a family, or explore working together? Get in touch with our team in Moshi.</p>
                 <div class="contact-card">
                     <a href="mailto:homeofchildrens26@gmail.com"><span class="contact-card__label">Email</span><strong>homeofchildrens26@gmail.com</strong></a>
-                    <a href="tel:+255755001312"><span class="contact-card__label">Call CHF</span><strong>+255 755 001 312</strong></a>
+                    <a href="tel:+255795469469"><span class="contact-card__label">Call CHF</span><strong>+255 795 469 469</strong></a>
                 </div>
                 <a class="button button--blue" href="mailto:homeofchildrens26@gmail.com?subject=Hello%20CHF">Email our team</a>
             </div>
@@ -218,9 +218,9 @@
 
     <footer class="site-footer" id="site-footer">
         <div class="container footer-contact-strip">
-            <a class="footer-contact-item" href="tel:+255755001312">
+            <a class="footer-contact-item" href="tel:+255795469469">
                 <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.8 9.4 7l-1.8 2.4a15.4 15.4 0 0 0 7 7l2.4-1.8 3.2 2.8-.8 2.9c-.2.8-1 1.3-1.8 1.2C9.8 20.6 3.4 14.2 2.5 6.4c-.1-.8.4-1.6 1.2-1.8z"/></svg></span>
-                <span><small>Call us</small><strong>+255 755 001 312</strong></span>
+                <span><small>Call us</small><strong>+255 795 469 469</strong></span>
             </a>
             <a class="footer-contact-item" href="mailto:homeofchildrens26@gmail.com">
                 <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></span>
@@ -237,7 +237,7 @@
                 <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
             </div>
             <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="#about">About CHF</a><a href="#services">Accommodation and meals</a><a href="#services">Transport to KCMC</a><a href="#services">Play and recreation</a><a href="#cancer-info">Childhood cancer</a><a href="#stories">News &amp; stories</a></div>
-            <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255755001312">+255 755 001 312</a><a href="tel:+255685749947">+255 685 749 947</a></div>
+            <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a><a href="tel:+255795469469">+255 795 469 469</a></div>
             <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="#donate">Support a child <span aria-hidden="true">↗</span></a></div>
         </div>
         <div class="footer-bottom"><div class="container footer-bottom__inner">
