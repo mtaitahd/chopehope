@@ -62,35 +62,44 @@
     </nav>
 
     <main id="main-content">
-        <section class="about-hero" aria-labelledby="about-title">
-            <div class="about-hero__media" aria-hidden="true">
-                <img src="{{ asset('images/hero3.jpg') }}" alt="" fetchpriority="high">
-            </div>
-            <div class="container about-hero__inner">
-                <div class="about-hero__copy">
+        <section class="hero" id="about-hero" aria-labelledby="hero-title">
+            <img class="hero__image" src="{{ asset('images/hero4.jpg') }}" alt="A child smiling while receiving care" fetchpriority="high">
+            <div class="hero__veil" aria-hidden="true"></div>
+            <div class="container hero__inner">
+                <div class="hero__copy">
                     <p class="eyebrow eyebrow--light"><span></span> Children's Hope Foundation · Moshi, Tanzania</p>
-                    <h1 id="about-title">About CHF</h1>
-                    <p>Care, comfort and practical support for children with cancer and the families beside them.</p>
+                    <h1 id="hero-title">No child should face cancer <em>alone.</em></h1>
+                    <p class="hero__lead">We support children with cancer and their caregivers with a safe place to stay, nourishing meals, transport and care for the whole family.</p>
+                    <div class="hero__actions">
+                        <a class="button button--orange" href="{{ route('home') }}#donate">Support a child <span aria-hidden="true">→</span></a>
+                        <a class="button button--outline-light" href="#support-services">Explore our services</a>
+                    </div>
                 </div>
-                <nav class="about-breadcrumb" aria-label="Breadcrumb">
-                    <a href="{{ route('home') }}#home">Home</a>
-                    <span aria-hidden="true">/</span>
-                    <span aria-current="page">About CHF</span>
-                </nav>
+                <div class="hero-note">
+                    <span class="hero-note__icon" aria-hidden="true">♡</span>
+                    <span><strong>A home away from home</strong><small>Close to care at KCMC</small></span>
+                </div>
             </div>
+            <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>
 
         <section class="about-intro" aria-labelledby="about-intro-title">
             <div class="container about-intro__grid">
-                <div class="about-intro__visual">
-                    <img src="{{ asset('images/hero1 replace.jpg') }}" alt="A child receiving care during a hospital stay" fetchpriority="high">
-                    <div class="about-intro__note"><span class="about-intro__note-mark" aria-hidden="true">♥</span><span>A safe place to stay close to treatment at KCMC</span></div>
+                <div class="about-intro__visual about-intro__visual--collage">
+                    <img class="about-intro__photo-main" src="{{ asset('images/leftcard.jpg') }}" alt="A child and caregiver sharing a caring moment" fetchpriority="high">
+                    <img class="about-intro__photo-small about-intro__photo-small--top" src="{{ asset('images/lefttp.jpg') }}" alt="A child receiving support from a health worker" loading="lazy">
+                    <img class="about-intro__photo-small about-intro__photo-small--bottom" src="{{ asset('images/hero1 replace.jpg') }}" alt="A child smiling during treatment" loading="lazy">
+                    <div class="about-intro__note"><span class="about-intro__note-mark" aria-hidden="true">♡</span><span>A safe place to stay close to treatment at KCMC</span></div>
                 </div>
                 <div class="about-intro__copy">
-                    <p class="eyebrow"><span></span> Who we are</p>
-                    <h2 id="about-intro-title">Care that reaches beyond the hospital.</h2>
+                    <p class="eyebrow"><span></span> About Children's Hope Foundation</p>
+                    <h2 id="about-intro-title">A caring home alongside a child’s treatment.</h2>
                     <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We work to ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
                     <p>Through our Home Away from Home facility near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
+                    <div class="about-intro__stats" aria-label="Our focus">
+                        <div><strong>01</strong><span>A safe place near treatment</span></div>
+                        <div><strong>02</strong><span>Support for children and caregivers</span></div>
+                    </div>
                     <a class="text-link" href="#history">Read our story <span aria-hidden="true">→</span></a>
                 </div>
             </div>
@@ -182,14 +191,16 @@
         <section class="about-support" id="support-services" aria-labelledby="support-services-title">
             <div class="container">
                 <div class="about-section-heading">
-                    <p class="eyebrow eyebrow--light"><span></span> Support services</p>
+                    <p class="eyebrow"><span></span> Support services</p>
                     <h2 id="support-services-title">Practical help at every step.</h2>
                     <p>Support for the needs around treatment can make the journey more manageable for children and caregivers.</p>
                 </div>
                 <div class="about-support__layout">
-                    <div class="about-support__visual">
-                        <img src="{{ asset('images/hero3.jpg') }}" alt="A child receiving attentive care" loading="lazy">
-                        <div class="about-support__visual-note"><span aria-hidden="true">♥</span><strong>Care for children.<br>Support for the whole family.</strong></div>
+                    <div class="about-service-wheel" aria-label="CHF combines family support, awareness and practical care">
+                        <div class="about-service-wheel__center"><span>CHF</span><small>Care around treatment</small></div>
+                        <span class="about-service-wheel__label about-service-wheel__label--one">Family<br>support</span>
+                        <span class="about-service-wheel__label about-service-wheel__label--two">Awareness</span>
+                        <span class="about-service-wheel__label about-service-wheel__label--three">Practical<br>care</span>
                     </div>
                     <div class="about-support__faq" aria-label="CHF support services">
                         <details class="about-faq" name="chf-support-services">
@@ -210,9 +221,22 @@
                         </details>
                     </div>
                 </div>
-                <div class="about-next-step">
-                    <p><strong>Learn more about the care CHF provides.</strong> Explore the services available to children and their families.</p>
-                    <a class="button button--yellow" href="{{ route('home') }}#services">Explore our services <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="about-offer-band">
+                <img src="{{ asset('images/hero3.jpg') }}" alt="" loading="lazy" aria-hidden="true">
+                <div class="about-offer-band__veil" aria-hidden="true"></div>
+                <div class="container about-offer-band__inner">
+                    <div class="about-offer-card">
+                        <p class="eyebrow eyebrow--light"><span></span> What we offer</p>
+                        <h3>Practical care for the whole family.</h3>
+                        <ul>
+                            <li><span aria-hidden="true">✓</span> Accommodation close to treatment</li>
+                            <li><span aria-hidden="true">✓</span> Nourishing meals for children and caregivers</li>
+                            <li><span aria-hidden="true">✓</span> Transport to and from KCMC appointments</li>
+                            <li><span aria-hidden="true">✓</span> Psychosocial care, play and caregiver support</li>
+                        </ul>
+                        <a class="button button--yellow" href="{{ route('home') }}#services">Explore our services <span aria-hidden="true">→</span></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -234,18 +258,16 @@
                         'address' => 'Moshi, Kilimanjaro, Tanzania',
                         'landmark' => 'Near KCMC Zonal Referral Hospital',
                         'image' => 'images/leftcard.jpg',
-                        'gallery' => ['images/lefttop.jpg', 'images/lefttp.jpg'],
+                        'gallery' => ['images/lefttop.jpg', 'images/lefttp.jpg', 'images/hero3.jpg', 'images/hero4.jpg'],
                     ]];
                 @endphp
                 @foreach ($officeLocations as $office)
                     <article class="about-office-card">
                         <div class="about-office-card__gallery" aria-label="Photos of CHF care and support">
-                            <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A child playing with a caregiver in a hospital setting" loading="lazy">
-                            <div class="about-office-card__side-images">
-                                @foreach ($office['gallery'] as $photo)
-                                    <img src="{{ asset($photo) }}" alt="Children smiling together" loading="lazy">
-                                @endforeach
-                            </div>
+                            <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A child and caregiver sharing time together" loading="lazy">
+                            @foreach ($office['gallery'] as $photo)
+                                <img class="about-office-card__gallery-image" src="{{ asset($photo) }}" alt="Children and caregivers receiving care and support" loading="lazy">
+                            @endforeach
                         </div>
                         <div class="about-office-card__details">
                             <p class="eyebrow"><span></span> Our office</p>
