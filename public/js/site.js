@@ -12,6 +12,7 @@ if (menuButton && menu) {
         link.addEventListener('click', () => {
             menuButton.setAttribute('aria-expanded', 'false');
             menu.classList.remove('is-open');
+            menu.querySelectorAll('.nav-dropdown[open]').forEach((dropdown) => dropdown.removeAttribute('open'));
         });
     });
 }

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137fbd">
+    <meta name="description" content="Learn about Children's Hope Foundation: our story, mission, vision, objectives and practical support for children with cancer and their caregivers in Tanzania.">
+    <title>About CHF | Children's Hope Foundation</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
+    <link rel="apple-touch-icon" href="{{ asset('images/chf-logo.png') }}?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container brand-row">
+            <a class="brand" href="{{ route('home') }}#home" aria-label="Children's Hope Foundation home">
+                <img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500">
+            </a>
+            <div class="brand-message">
+                <span class="brand-message__eyebrow">Children's Hope Foundation</span>
+                <span class="brand-message__line">Hope, love and support for children with cancer.</span>
+            </div>
+            <div class="brand-actions" aria-label="Quick links">
+                <a class="button button--orange button--small" href="{{ route('home') }}#donate">Donate</a>
+                <a class="button button--yellow button--small" href="{{ route('home') }}#get-involved">Get involved</a>
+                <a class="button button--blue button--small" href="{{ route('home') }}#contact">Contact CHF</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="container main-nav__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+                <span class="nav-toggle__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Menu</span>
+            </button>
+            <div class="nav-links" id="main-menu">
+                <a class="nav-link" href="{{ route('home') }}#home">Home</a>
+                <details class="nav-dropdown">
+                    <summary class="nav-link is-active" aria-current="page">About CHF <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
+                    <div class="nav-dropdown__menu">
+                        <a class="nav-dropdown__link" href="{{ route('about') }}" aria-current="page">About overview</a>
+                        <a class="nav-dropdown__link" href="#history">Foundation history</a>
+                        <a class="nav-dropdown__link" href="#mission-vision">Mission &amp; vision</a>
+                        <a class="nav-dropdown__link" href="#objectives">Our objectives</a>
+                        <a class="nav-dropdown__link" href="#support-services">Support services</a>
+                    </div>
+                </details>
+                <a class="nav-link" href="{{ route('home') }}#services">Our services</a>
+                <a class="nav-link" href="{{ route('home') }}#cancer-info">Childhood cancer</a>
+                <a class="nav-link" href="{{ route('home') }}#stories">News &amp; stories</a>
+                <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
+                <a class="nav-link" href="{{ route('home') }}#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="about-hero" aria-labelledby="about-title">
+            <div class="container about-hero__inner">
+                <div class="about-hero__copy">
+                    <p class="eyebrow eyebrow--light"><span></span> Children's Hope Foundation · Moshi, Tanzania</p>
+                    <h1 id="about-title">About CHF</h1>
+                    <p>Care, comfort and practical support for children with cancer and the families beside them.</p>
+                </div>
+                <nav class="about-breadcrumb" aria-label="Breadcrumb">
+                    <a href="{{ route('home') }}#home">Home</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">About CHF</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="about-intro" aria-labelledby="about-intro-title">
+            <div class="container about-intro__grid">
+                <div class="about-intro__visual">
+                    <img src="{{ asset('images/hero1 replace.jpg') }}" alt="A child receiving care during a hospital stay" fetchpriority="high">
+                    <div class="about-intro__note"><span class="about-intro__note-mark" aria-hidden="true">♥</span><span>A safe place to stay close to treatment at KCMC</span></div>
+                </div>
+                <div class="about-intro__copy">
+                    <p class="eyebrow"><span></span> Who we are</p>
+                    <h2 id="about-intro-title">Care that reaches beyond the hospital.</h2>
+                    <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We work to ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
+                    <p>Through our Home Away from Home facility near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
+                    <a class="text-link" href="#history">Read our story <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-values-strip" aria-label="CHF at a glance">
+            <div class="container about-values-strip__grid">
+                <article class="about-value-card">
+                    <span class="about-value-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-4.4-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.6-8 11-8 11Z"/><path d="M8 12h8M12 8v8"/></svg></span>
+                    <div><h3>Who we are</h3><p>A Moshi-based foundation supporting children with cancer and their caregivers throughout treatment.</p></div>
+                </article>
+                <article class="about-value-card">
+                    <span class="about-value-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><path d="m5 5 14 14M19 5 5 19"/></svg></span>
+                    <div><h3>Why we exist</h3><p>Distance and the cost of travel or accommodation should not keep a child from reaching care.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-story" id="history" aria-labelledby="about-story-title">
+            <div class="container">
+                <div class="about-story__heading">
+                    <p class="eyebrow"><span></span> Foundation history</p>
+                    <h2 class="about-section-heading__title" id="about-story-title">A response to the long journey for care.</h2>
+                    <p>CHF's work is rooted in the challenges families can face when they must travel to reach specialized childhood cancer treatment.</p>
+                </div>
+                <div class="about-story__grid">
+                    <div class="about-story__copy">
+                        <h3>Making the path to treatment easier.</h3>
+                        <p>Specialized care is concentrated at hospitals such as KCMC. For families coming from distant communities, fares, meals and a safe place to stay can add strain to an already difficult time.</p>
+                        <p>Children may need regular appointments and follow-up care. CHF helps bridge the distance between medical treatment and day-to-day family needs with a nearby support home and practical care.</p>
+                        <p>Our work brings children and caregivers a place to rest, nourishing meals, transport to appointments and psychosocial support during the treatment journey.</p>
+                    </div>
+                    <div class="about-story__image">
+                        <img src="{{ asset('images/second section.jpg') }}" alt="A child smiling with a comfort toy during treatment" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-mission" id="mission-vision" aria-labelledby="mission-vision-title">
+            <div class="container">
+                <div class="about-section-heading">
+                    <p class="eyebrow"><span></span> Our direction</p>
+                    <h2 id="mission-vision-title">The purpose behind every act of care.</h2>
+                    <p>Our mission and vision guide the support we offer children and their caregivers.</p>
+                </div>
+                <div class="about-mission__grid">
+                    <article class="about-statement about-statement--vision">
+                        <span class="about-statement__label">Our vision</span>
+                        <h3>Hope for the whole journey.</h3>
+                        <p>To give hope, share love, and support children with cancer and their caregivers throughout the treatment journey and beyond.</p>
+                    </article>
+                    <article class="about-statement about-statement--mission">
+                        <span class="about-statement__label">Our mission</span>
+                        <h3>Support that helps families continue.</h3>
+                        <p>To provide high-quality accommodation, nutrition, transport and psychosocial support to children with cancer and their caregivers, ensuring no child abandons treatment due to poverty or distance.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-objectives" id="objectives" aria-labelledby="objectives-title">
+            <div class="container">
+                <div class="about-section-heading">
+                    <p class="eyebrow"><span></span> Our objectives</p>
+                    <h2 id="objectives-title">What we work towards.</h2>
+                    <p>CHF's objectives focus on access to care, family wellbeing and childhood cancer awareness.</p>
+                </div>
+                <div class="about-objectives__grid">
+                    <article class="about-objective">
+                        <span class="about-objective__number">01</span>
+                        <h3>Improve access to timely care</h3>
+                        <p>Reduce barriers to diagnosis, treatment and follow-up through practical assistance and stronger health services.</p>
+                    </article>
+                    <article class="about-objective">
+                        <span class="about-objective__number">02</span>
+                        <h3>Strengthen support for families</h3>
+                        <p>Help improve quality of life through counselling, play, education assistance and caregiver support.</p>
+                    </article>
+                    <article class="about-objective">
+                        <span class="about-objective__number">03</span>
+                        <h3>Grow awareness and early detection</h3>
+                        <p>Promote understanding of childhood cancer, reduce stigma and encourage people to seek medical care early.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-support" id="support-services" aria-labelledby="support-services-title">
+            <div class="container">
+                <div class="about-section-heading">
+                    <p class="eyebrow eyebrow--light"><span></span> Support services</p>
+                    <h2 id="support-services-title">Practical help at every step.</h2>
+                    <p>Support for the needs around treatment can make the journey more manageable for children and caregivers.</p>
+                </div>
+                <div class="about-support__grid">
+                    <article class="about-support-card">
+                        <span class="about-support-card__icon" aria-hidden="true">⌂</span>
+                        <h3>Accommodation and meals</h3>
+                        <p>A safe, welcoming place to stay and meals for families travelling from distant communities.</p>
+                    </article>
+                    <article class="about-support-card">
+                        <span class="about-support-card__icon" aria-hidden="true">↗</span>
+                        <h3>Transport to KCMC</h3>
+                        <p>Reliable trips between CHF's support home and children's treatment appointments.</p>
+                    </article>
+                    <article class="about-support-card">
+                        <span class="about-support-card__icon" aria-hidden="true">✳</span>
+                        <h3>Play and recreation</h3>
+                        <p>Art, storytelling and activities that encourage connection and emotional wellbeing.</p>
+                    </article>
+                    <article class="about-support-card">
+                        <span class="about-support-card__icon" aria-hidden="true">♡</span>
+                        <h3>Psychosocial care</h3>
+                        <p>Counselling, guidance and peer support for children, parents and caregivers.</p>
+                    </article>
+                </div>
+                <div class="about-next-step">
+                    <p><strong>Learn more about the care CHF provides.</strong> Explore the services available to children and their families.</p>
+                    <a class="button button--yellow" href="{{ route('home') }}#services">Explore our services <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+        <div class="container footer-contact-strip">
+            <a class="footer-contact-item" href="tel:+255795469469">
+                <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.8 9.4 7l-1.8 2.4a15.4 15.4 0 0 0 7 7l2.4-1.8 3.2 2.8-.8 2.9c-.2.8-1 1.3-1.8 1.2C9.8 20.6 3.4 14.2 2.5 6.4c-.1-.8.4-1.6 1.2-1.8z"/></svg></span>
+                <span><small>Call us</small><strong>+255 795 469 469</strong></span>
+            </a>
+            <a class="footer-contact-item" href="mailto:homeofchildrens26@gmail.com">
+                <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></svg></span>
+                <span><small>Email us</small><strong>homeofchildrens26@gmail.com</strong></span>
+            </a>
+            <a class="footer-contact-item" href="{{ route('home') }}#contact">
+                <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5.2-8 12-8 12S4 15.2 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                <span><small>Our office</small><strong>Moshi, Kilimanjaro<br>Near KCMC Hospital</strong></span>
+            </a>
+        </div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="{{ route('home') }}#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
+                <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
+            </div>
+            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('home') }}#services">Accommodation and meals</a><a href="{{ route('home') }}#services">Transport to KCMC</a><a href="{{ route('home') }}#services">Play and recreation</a><a href="{{ route('home') }}#cancer-info">Childhood cancer</a><a href="{{ route('home') }}#stories">News &amp; stories</a></div>
+            <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a></div>
+            <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="{{ route('home') }}#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="{{ route('home') }}#donate">Support a child <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom__inner">
+            <span>© {{ date('Y') }} Children's Hope Foundation (CHF). All rights reserved.</span>
+            <nav aria-label="Footer navigation"><a href="{{ route('about') }}">About</a><a href="{{ route('home') }}#services">Services</a><a href="{{ route('home') }}#contact">Contact</a><a href="{{ route('home') }}#get-involved">Get involved</a></nav>
+        </div><a class="footer-to-top" href="#about-title" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a></div>
+    </footer>
+
+    <script src="{{ asset('js/site.js') }}" defer></script>
+</body>
+</html>

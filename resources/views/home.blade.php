@@ -40,7 +40,7 @@
                 </button>
                 <div class="nav-links" id="main-menu">
                     <a class="nav-link is-active" href="#home">Home</a>
-                    <a class="nav-link" href="#about">About CHF</a>
+                    <a class="nav-link" href="{{ route('about') }}">About CHF</a>
                     <a class="nav-link" href="#services">Our services</a>
                     <a class="nav-link" href="#cancer-info">Childhood cancer</a>
                     <a class="nav-link" href="#stories">News &amp; stories</a>
