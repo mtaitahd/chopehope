@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}?v=about-20261014">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -49,6 +49,7 @@
                         <a class="nav-dropdown__link" href="#mission-vision">Mission &amp; vision</a>
                         <a class="nav-dropdown__link" href="#objectives">Our objectives</a>
                         <a class="nav-dropdown__link" href="#support-services">Support services</a>
+                        <a class="nav-dropdown__link" href="#office">Office location</a>
                     </div>
                 </details>
                 <a class="nav-link" href="{{ route('home') }}#services">Our services</a>
@@ -182,32 +183,76 @@
                     <h2 id="support-services-title">Practical help at every step.</h2>
                     <p>Support for the needs around treatment can make the journey more manageable for children and caregivers.</p>
                 </div>
-                <div class="about-support__grid">
-                    <article class="about-support-card">
-                        <span class="about-support-card__icon" aria-hidden="true">⌂</span>
-                        <h3>Accommodation and meals</h3>
-                        <p>A safe, welcoming place to stay and meals for families travelling from distant communities.</p>
-                    </article>
-                    <article class="about-support-card">
-                        <span class="about-support-card__icon" aria-hidden="true">↗</span>
-                        <h3>Transport to KCMC</h3>
-                        <p>Reliable trips between CHF's support home and children's treatment appointments.</p>
-                    </article>
-                    <article class="about-support-card">
-                        <span class="about-support-card__icon" aria-hidden="true">✳</span>
-                        <h3>Play and recreation</h3>
-                        <p>Art, storytelling and activities that encourage connection and emotional wellbeing.</p>
-                    </article>
-                    <article class="about-support-card">
-                        <span class="about-support-card__icon" aria-hidden="true">♡</span>
-                        <h3>Psychosocial care</h3>
-                        <p>Counselling, guidance and peer support for children, parents and caregivers.</p>
-                    </article>
+                <div class="about-support__layout">
+                    <div class="about-support__visual">
+                        <img src="{{ asset('images/hero3.jpg') }}" alt="A child receiving attentive care" loading="lazy">
+                        <div class="about-support__visual-note"><span aria-hidden="true">♥</span><strong>Care for children.<br>Support for the whole family.</strong></div>
+                    </div>
+                    <div class="about-support__faq" aria-label="CHF support services">
+                        <details class="about-faq" name="chf-support-services">
+                            <summary><span class="about-faq__number">01</span><span class="about-faq__title">Accommodation and meals</span><span class="about-faq__toggle" aria-hidden="true"></span></summary>
+                            <div class="about-faq__answer"><p>CHF's Home Away from Home gives children and caregivers a safe place to stay near treatment, with nourishing meals during their time in Moshi.</p></div>
+                        </details>
+                        <details class="about-faq" name="chf-support-services">
+                            <summary><span class="about-faq__number">02</span><span class="about-faq__title">Transport to treatment</span><span class="about-faq__toggle" aria-hidden="true"></span></summary>
+                            <div class="about-faq__answer"><p>Transport support helps families reach KCMC appointments and continue the treatment and follow-up visits their child needs.</p></div>
+                        </details>
+                        <details class="about-faq" name="chf-support-services">
+                            <summary><span class="about-faq__number">03</span><span class="about-faq__title">Psychosocial care</span><span class="about-faq__toggle" aria-hidden="true"></span></summary>
+                            <div class="about-faq__answer"><p>Children and caregivers can receive emotional support, guidance and connection with others who understand the challenges of treatment.</p></div>
+                        </details>
+                        <details class="about-faq" name="chf-support-services">
+                            <summary><span class="about-faq__number">04</span><span class="about-faq__title">Play and recreation</span><span class="about-faq__toggle" aria-hidden="true"></span></summary>
+                            <div class="about-faq__answer"><p>Play and age-appropriate activities give children room for joy, creativity and connection alongside their care.</p></div>
+                        </details>
+                    </div>
                 </div>
                 <div class="about-next-step">
                     <p><strong>Learn more about the care CHF provides.</strong> Explore the services available to children and their families.</p>
                     <a class="button button--yellow" href="{{ route('home') }}#services">Explore our services <span aria-hidden="true">→</span></a>
                 </div>
+            </div>
+        </section>
+
+        <section class="about-office" id="office" aria-labelledby="about-office-title">
+            <div class="about-office__banner">
+                <div class="container">
+                    <p class="eyebrow eyebrow--light"><span></span> Find us in Moshi</p>
+                    <h2 id="about-office-title">A welcoming place, close to care.</h2>
+                    <p>Our office and family support home are based near KCMC in Moshi, Kilimanjaro.</p>
+                </div>
+            </div>
+            <div class="container about-office__content">
+                @php
+                    // Static office entry for now; this can be replaced by admin-managed locations later.
+                    $officeLocations = [[
+                        'name' => "Children's Hope Foundation Office",
+                        'subtitle' => 'Office & Home Away from Home',
+                        'address' => 'Moshi, Kilimanjaro, Tanzania',
+                        'landmark' => 'Near KCMC Zonal Referral Hospital',
+                        'image' => 'images/leftcard.jpg',
+                        'gallery' => ['images/lefttop.jpg', 'images/lefttp.jpg'],
+                    ]];
+                @endphp
+                @foreach ($officeLocations as $office)
+                    <article class="about-office-card">
+                        <div class="about-office-card__gallery" aria-label="Photos of CHF care and support">
+                            <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A child playing with a caregiver in a hospital setting" loading="lazy">
+                            <div class="about-office-card__side-images">
+                                @foreach ($office['gallery'] as $photo)
+                                    <img src="{{ asset($photo) }}" alt="Children smiling together" loading="lazy">
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="about-office-card__details">
+                            <p class="eyebrow"><span></span> Our office</p>
+                            <h3>{{ $office['name'] }}</h3>
+                            <p class="about-office-card__subtitle">{{ $office['subtitle'] }}</p>
+                            <p class="about-office-card__address"><span aria-hidden="true">⌖</span><span>{{ $office['address'] }}<br>{{ $office['landmark'] }}</span></p>
+                            <a class="button button--blue" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </section>
     </main>
