@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - cd /home/chopecot/chopehope && php artisan optimize:clear
