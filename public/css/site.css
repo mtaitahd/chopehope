@@ -204,11 +204,12 @@ button { font: inherit; }
 .partner-callout h2 { max-width: 740px; }
 .partner-callout > p:not(.eyebrow) { max-width: 590px; margin: 16px 0 24px; color: var(--muted); }
 
-.about-hero { position: relative; display: flex; min-height: 365px; align-items: center; overflow: hidden; isolation: isolate; color: #fff; background: var(--blue-dark); }
-.about-hero::before, .about-hero::after { position: absolute; z-index: -1; inset: 0; content: ""; }
-.about-hero::before { background: url('../images/hero3.jpg') center 42% / cover; }
-.about-hero::after { background: linear-gradient(90deg, rgba(5, 35, 56, .91) 0%, rgba(5, 57, 86, .78) 48%, rgba(7, 80, 120, .42) 100%); }
-.about-hero__inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; padding-block: 74px; }
+.about-hero { position: relative; display: flex; min-height: 390px; align-items: center; overflow: hidden; isolation: isolate; color: #fff; background: var(--blue-dark); }
+.about-hero__media, .about-hero::after { position: absolute; inset: 0; }
+.about-hero__media { z-index: 0; }
+.about-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+.about-hero::after { z-index: 1; content: ""; background: linear-gradient(90deg, rgba(5, 35, 56, .91) 0%, rgba(5, 57, 86, .78) 48%, rgba(7, 80, 120, .42) 100%); }
+.about-hero__inner { position: relative; z-index: 2; display: flex; min-height: 390px; align-items: flex-end; justify-content: space-between; gap: 36px; padding-block: 74px; }
 .about-hero__copy { max-width: 700px; }
 .about-hero__copy h1 { margin: 0; font-family: var(--font-display); font-size: clamp(46px, 6vw, 76px); font-weight: 900; letter-spacing: -.04em; line-height: 1; }
 .about-hero__copy > p:last-child { max-width: 610px; margin: 17px 0 0; color: rgba(255,255,255,.88); font-size: clamp(16px, 1.5vw, 19px); }

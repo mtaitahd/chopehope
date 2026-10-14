@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}?v=about-20261014">
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}?v={{ filemtime(public_path('css/site.css')) }}">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -63,6 +63,9 @@
 
     <main id="main-content">
         <section class="about-hero" aria-labelledby="about-title">
+            <div class="about-hero__media" aria-hidden="true">
+                <img src="{{ asset('images/hero3.jpg') }}" alt="" fetchpriority="high">
+            </div>
             <div class="container about-hero__inner">
                 <div class="about-hero__copy">
                     <p class="eyebrow eyebrow--light"><span></span> Children's Hope Foundation · Moshi, Tanzania</p>
