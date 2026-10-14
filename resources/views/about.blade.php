@@ -68,8 +68,8 @@
             <div class="container hero__inner">
                 <div class="hero__copy">
                     <p class="eyebrow eyebrow--light"><span></span> Children's Hope Foundation · Moshi, Tanzania</p>
-                    <h1 id="hero-title">No child should face cancer <em>alone.</em></h1>
-                    <p class="hero__lead">We support children with cancer and their caregivers with a safe place to stay, nourishing meals, transport and care for the whole family.</p>
+                    <h1 id="hero-title">A place of hope, <em>close to care.</em></h1>
+                    <p class="hero__lead">Learn how Children’s Hope Foundation supports children with cancer and their caregivers throughout treatment in Moshi.</p>
                     <div class="hero__actions">
                         <a class="button button--orange" href="{{ route('home') }}#donate">Support a child <span aria-hidden="true">→</span></a>
                         <a class="button button--outline-light" href="#support-services">Explore our services</a>
@@ -84,36 +84,31 @@
         </section>
 
         <section class="about-intro" aria-labelledby="about-intro-title">
-            <div class="container about-intro__grid">
-                <div class="about-intro__visual about-intro__visual--collage">
-                    <img class="about-intro__photo-main" src="{{ asset('images/leftcard.jpg') }}" alt="A child and caregiver sharing a caring moment" fetchpriority="high">
-                    <img class="about-intro__photo-small about-intro__photo-small--top" src="{{ asset('images/lefttp.jpg') }}" alt="A child receiving support from a health worker" loading="lazy">
-                    <img class="about-intro__photo-small about-intro__photo-small--bottom" src="{{ asset('images/hero1 replace.jpg') }}" alt="A child smiling during treatment" loading="lazy">
-                    <div class="about-intro__note"><span class="about-intro__note-mark" aria-hidden="true">♡</span><span>A safe place to stay close to treatment at KCMC</span></div>
-                </div>
-                <div class="about-intro__copy">
-                    <p class="eyebrow"><span></span> About Children's Hope Foundation</p>
-                    <h2 id="about-intro-title">A caring home alongside a child’s treatment.</h2>
-                    <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We work to ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
-                    <p>Through our Home Away from Home facility near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
-                    <div class="about-intro__stats" aria-label="Our focus">
-                        <div><strong>01</strong><span>A safe place near treatment</span></div>
-                        <div><strong>02</strong><span>Support for children and caregivers</span></div>
-                    </div>
-                    <a class="text-link" href="#history">Read our story <span aria-hidden="true">→</span></a>
+            <div class="container about-intro__copy">
+                <p class="eyebrow eyebrow--light"><span></span> About Children's Hope Foundation</p>
+                <h2 id="about-intro-title">What is CHF?</h2>
+                <p class="about-intro__subtitle">A Moshi-based foundation supporting children with cancer and their families.</p>
+                <div class="about-intro__prose">
+                    <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We help ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
+                    <p>Through our Home Away from Home near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
                 </div>
             </div>
         </section>
 
         <section class="about-values-strip" aria-label="CHF at a glance">
             <div class="container about-values-strip__grid">
+                <div class="about-values-strip__heading">
+                    <p class="eyebrow"><span></span> The foundation behind the care</p>
+                    <h2>Where we keep hope alive.</h2>
+                    <p>We stand alongside children and families, bringing care closer during a difficult journey.</p>
+                </div>
                 <article class="about-value-card">
                     <span class="about-value-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-4.4-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.6-8 11-8 11Z"/><path d="M8 12h8M12 8v8"/></svg></span>
-                    <div><h3>Who we are</h3><p>A Moshi-based foundation supporting children with cancer and their caregivers throughout treatment.</p></div>
+                    <div><h3>Who we are</h3><p>A local foundation standing beside children with cancer and the caregivers who support them throughout treatment.</p></div>
                 </article>
                 <article class="about-value-card">
                     <span class="about-value-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><path d="m5 5 14 14M19 5 5 19"/></svg></span>
-                    <div><h3>Why we exist</h3><p>Distance and the cost of travel or accommodation should not keep a child from reaching care.</p></div>
+                    <div><h3>Why we exist</h3><p>Distance, travel costs and a lack of nearby accommodation should not keep a child from reaching care.</p></div>
                 </article>
             </div>
         </section>
@@ -263,8 +258,8 @@
                 @endphp
                 @foreach ($officeLocations as $office)
                     <article class="about-office-card">
-                        <div class="about-office-card__gallery" aria-label="Photos of CHF care and support">
-                            <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A child and caregiver sharing time together" loading="lazy">
+                        <div class="about-office-card__gallery" aria-label="Five photos showing CHF care and support">
+                            <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A health worker supporting a child during treatment" loading="lazy">
                             @foreach ($office['gallery'] as $photo)
                                 <img class="about-office-card__gallery-image" src="{{ asset($photo) }}" alt="Children and caregivers receiving care and support" loading="lazy">
                             @endforeach
@@ -309,7 +304,7 @@
         <div class="footer-bottom"><div class="container footer-bottom__inner">
             <span>© {{ date('Y') }} Children's Hope Foundation (CHF). All rights reserved.</span>
             <nav aria-label="Footer navigation"><a href="{{ route('about') }}">About</a><a href="{{ route('home') }}#services">Services</a><a href="{{ route('home') }}#contact">Contact</a><a href="{{ route('home') }}#get-involved">Get involved</a></nav>
-        </div><a class="footer-to-top" href="#about-title" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a></div>
+        </div><a class="footer-to-top" href="#about-hero" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a></div>
     </footer>
 
     <script src="{{ asset('js/site.js') }}" defer></script>
