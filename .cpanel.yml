@@ -1,4 +1,5 @@
 ---
 deployment:
   tasks:
+    - /bin/cp /home/chopecot/chopehope/public/css/site.css /home/chopecot/public_html/css/site.css
     - cd /home/chopecot/chopehope && php artisan optimize:clear
