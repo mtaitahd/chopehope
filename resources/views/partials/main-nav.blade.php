@@ -6,7 +6,7 @@
         </button>
         <div class="nav-links" id="main-menu">
             <a class="nav-link {{ request()->routeIs('home') ? 'is-active' : '' }}" href="{{ route('home') }}#home">Home</a>
-            <details class="nav-dropdown">
+            <details class="nav-dropdown" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('about') ? 'is-active' : '' }}" @if(request()->routeIs('about')) aria-current="page" @endif>About CHF</summary>
                 <div class="nav-dropdown__menu">
                     <a class="nav-dropdown__link" href="{{ route('about') }}">About overview</a>
@@ -17,7 +17,7 @@
                     <a class="nav-dropdown__link" href="{{ route('about') }}#office">Office location</a>
                 </div>
             </details>
-            <details class="nav-dropdown nav-dropdown--services">
+            <details class="nav-dropdown nav-dropdown--services" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('services.*') ? 'is-active' : '' }}" @if(request()->routeIs('services.*')) aria-current="page" @endif>Our services</summary>
                 <div class="nav-dropdown__menu">
                     @foreach(config('service_pages') as $slug => $service)
@@ -25,7 +25,7 @@
                     @endforeach
                 </div>
             </details>
-            <details class="nav-dropdown nav-dropdown--programs">
+            <details class="nav-dropdown nav-dropdown--programs" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('programs.*') ? 'is-active' : '' }}" @if(request()->routeIs('programs.*')) aria-current="page" @endif>Programs</summary>
                 <div class="nav-dropdown__menu">
                     <a class="nav-dropdown__link nav-dropdown__link--all" href="{{ route('programs.index') }}">All programs <span aria-hidden="true">→</span></a>
@@ -34,7 +34,7 @@
                     @endforeach
                 </div>
             </details>
-            <details class="nav-dropdown nav-dropdown--cancer">
+            <details class="nav-dropdown nav-dropdown--cancer" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('cancer.*') ? 'is-active' : '' }}" @if(request()->routeIs('cancer.*')) aria-current="page" @endif>Childhood cancer</summary>
                 <div class="nav-dropdown__menu">
                     <a class="nav-dropdown__link nav-dropdown__link--all" href="{{ route('cancer.index') }}">All topics <span aria-hidden="true">→</span></a>
@@ -43,7 +43,7 @@
                     @endforeach
                 </div>
             </details>
-            <details class="nav-dropdown nav-dropdown--news">
+            <details class="nav-dropdown nav-dropdown--news" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('news.*') ? 'is-active' : '' }}" @if(request()->routeIs('news.*')) aria-current="page" @endif>News &amp; stories</summary>
                 <div class="nav-dropdown__menu">
                     <a class="nav-dropdown__link" href="{{ route('news.index') }}">News &amp; updates</a>
@@ -51,7 +51,7 @@
                     <a class="nav-dropdown__link" href="{{ route('news.vacancies') }}">Vacancies</a>
                 </div>
             </details>
-            <details class="nav-dropdown nav-dropdown--involved">
+            <details class="nav-dropdown nav-dropdown--involved" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('involved.*') ? 'is-active' : '' }}" @if(request()->routeIs('involved.*')) aria-current="page" @endif>Get involved</summary>
                 <div class="nav-dropdown__menu">
                     @foreach(config('involvement_pages') as $slug => $opportunity)
