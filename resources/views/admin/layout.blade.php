@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') · CHF Publishing</title>
-    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/ruang-admin.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('staff-assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('staff-assets/vendor/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('staff-assets/css/ruang-admin.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('staff-assets/css/admin.css') }}">
     @stack('styles')
 </head>
 <body id="page-top">
@@ -40,9 +40,9 @@
     </div><footer class="sticky-footer bg-white"><div class="container my-auto"><div class="copyright text-center my-auto"><span>© {{ date('Y') }} Children's Hope Foundation</span></div></div></footer></div>
 </div>
 <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-<script src="{{ asset('admin/assets/js/jquery.min.js') }}"></script>
-<script src="{{ asset('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('admin/assets/js/ruang-admin.min.js') }}"></script>
+<script src="{{ asset('staff-assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('staff-assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('staff-assets/js/ruang-admin.min.js') }}"></script>
 @stack('scripts')
 </body>
 </html>
