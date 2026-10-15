@@ -26,9 +26,9 @@
                 <span class="brand-message__line">Hope, love and support for children with cancer.</span>
             </div>
             <div class="brand-actions" aria-label="Quick links">
-                <a class="button button--orange button--small" href="{{ route('home') }}#donate">Donate</a>
-                <a class="button button--yellow button--small" href="{{ route('home') }}#get-involved">Get involved</a>
-                <a class="button button--blue button--small" href="{{ route('home') }}#contact">Contact CHF</a>
+                <a class="button button--orange button--small" href="{{ route('involved.show', ['slug' => 'donate']) }}">Donate</a>
+                <a class="button button--yellow button--small" href="{{ route('involved.show', ['slug' => 'volunteer']) }}">Get involved</a>
+                <a class="button button--blue button--small" href="{{ route('contact') }}">Contact CHF</a>
             </div>
         </div>
     </header>

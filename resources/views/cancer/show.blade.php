@@ -17,7 +17,7 @@
     <header class="site-header"><div class="container brand-row">
         <a class="brand" href="{{ route('home') }}#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
         <div class="brand-message"><span class="brand-message__eyebrow">Children's Hope Foundation</span><span class="brand-message__line">Hope, love and support for children with cancer.</span></div>
-        <div class="brand-actions" aria-label="Quick links"><a class="button button--orange button--small" href="{{ route('home') }}#donate">Donate</a><a class="button button--yellow button--small" href="{{ route('home') }}#get-involved">Get involved</a><a class="button button--blue button--small" href="{{ route('home') }}#contact">Contact CHF</a></div>
+        <div class="brand-actions" aria-label="Quick links"><a class="button button--orange button--small" href="{{ route('involved.show', ['slug' => 'donate']) }}">Donate</a><a class="button button--yellow button--small" href="{{ route('involved.show', ['slug' => 'volunteer']) }}">Get involved</a><a class="button button--blue button--small" href="{{ route('contact') }}">Contact CHF</a></div>
     </div></header>
     @include('partials.main-nav')
     @php($pageHero = \App\Support\PageHeroContent::get('cancer-'.$slug))
