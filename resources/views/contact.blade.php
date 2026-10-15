@@ -53,7 +53,7 @@
         <section class="contact-donation" id="donate" aria-labelledby="contact-donation-title">
             <div class="container contact-donation__inner">
                 <div class="contact-donation__copy"><p class="eyebrow eyebrow--light"><span></span> Give hope</p><h2 id="contact-donation-title">Your support helps families stay close to care.</h2><p>To support CHF by bank transfer, use the account details below. Please contact us if you need donation assistance.</p><a class="button button--yellow" href="mailto:homeofchildrens26@gmail.com?subject=CHF%20Donation">Ask about donating <span aria-hidden="true">→</span></a></div>
-                <div class="donation-account" aria-label="CHF donation account details"><span class="donation-account__label">Donation account</span><span class="donation-account__number">3391749733</span><span class="donation-account__rule"></span><span class="donation-account__label">Account name</span><strong>CHILDREN’S HOPE FOUNDATION</strong></div>
+                <div class="donation-account" aria-label="CHF donation account details"><span class="donation-account__label">Donation account</span><span class="donation-account__number">3391749733</span><span class="donation-account__rule"></span><span class="donation-account__label">Account name</span><strong>CHILDREN’S HOPE FOUNDATION</strong><button class="button button--blue donation-mobile-trigger" type="button" data-donation-open>Donate via mobile money <span aria-hidden="true">→</span></button><small class="donation-mobile-hint">Pay securely from your mobile money line. Your PIN stays private on your phone.</small></div>
             </div>
         </section>
 
@@ -66,6 +66,8 @@
     </main>
 
     @include('partials.site-footer')
+    @include('partials.donation-dialog')
     <script src="{{ asset('js/site.js') }}" defer></script>
+    <script src="{{ asset('js/donation.js') }}?v={{ filemtime(public_path('js/donation.js')) }}" defer></script>
 </body>
 </html>
