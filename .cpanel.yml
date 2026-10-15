@@ -4,4 +4,6 @@ deployment:
     - /bin/cp /home/chopecot/chopehope/public/css/site.css /home/chopecot/public_html/css/site.css
     - /bin/mkdir -p /home/chopecot/public_html/staff-assets
     - /bin/cp -R /home/chopecot/chopehope/public/staff-assets/. /home/chopecot/public_html/staff-assets/
+    - /bin/mkdir -p /home/chopecot/public_html/images
+    - /bin/cp -f /home/chopecot/chopehope/public/images/chf-logo.png /home/chopecot/public_html/images/chf-logo.png
     - cd /home/chopecot/chopehope && php artisan optimize:clear
