@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#137fbd">
     <meta name="description" content="{{ $program['lead'] }}">
-    <title>{{ $program['name'] }} | Children's Hope Foundation</title>
+    <title>{{ $program['name'] }} for Children with Cancer | CHF Tanzania</title>
     <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

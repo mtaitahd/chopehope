@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#137fbd">
     <meta name="description" content="Children's Hope Foundation supports children with cancer and their caregivers through accommodation, meals, transport and psychosocial care in Moshi, Tanzania.">
-    <title>Children's Hope Foundation | Hope, love and support</title>
+    <title>Children's Hope Foundation Tanzania | Childhood Cancer Family Support</title>
     <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="apple-touch-icon" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">

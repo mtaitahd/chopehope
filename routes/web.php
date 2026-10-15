@@ -10,8 +10,10 @@ use App\Http\Controllers\Auth\StaffAuthController;
 use App\Http\Controllers\DonationPaymentController;
 use App\Http\Controllers\AblinerWebhookController;
 use App\Http\Controllers\PublicNewsController;
+use App\Http\Controllers\SitemapController;
 
 Route::view('/', 'home')->name('home');
+Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 Route::view('/about', 'about')->name('about');
 Route::get('/services/{slug}', function (string $slug) {
     $page = config("service_pages.{$slug}");

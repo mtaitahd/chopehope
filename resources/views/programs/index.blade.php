@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#137fbd">
-    <meta name="description" content="Explore Children's Hope Foundation programmes supporting children with cancer and their caregivers in Moshi, Tanzania.">
-    <title>Programs | Children's Hope Foundation</title>
+    <meta name="description" content="Explore Children's Hope Foundation programmes for children with cancer and their families, including accommodation, meals, transport and psychosocial support in Moshi, Tanzania.">
+    <title>Childhood Cancer Support Programmes in Tanzania | CHF</title>
     <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

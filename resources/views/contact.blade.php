@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#137fbd">
     <meta name="description" content="Contact Children's Hope Foundation in Moshi, Tanzania, for family support, partnerships, donations and directions to our office near KCMC.">
-    <title>{{ $hero['label'] }} | Children's Hope Foundation</title>
+    <title>Contact CHF in Moshi, Tanzania | Children's Hope Foundation</title>
     <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
