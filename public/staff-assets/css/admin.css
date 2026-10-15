@@ -19,6 +19,8 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 #content-wrapper { background: #f4f7f9; }
 .topbar { min-height: 4.4rem; background: #fff; }
 .admin-context { color: var(--chf-muted); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.admin-topbar-brand { display: inline-flex; width: 36px; height: 36px; flex: 0 0 36px; align-items: center; justify-content: center; margin-right: 12px; }
+.admin-topbar-brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .admin-role { display: block; color: var(--chf-blue); font-size: 10px; font-weight: 800; }
 .admin-avatar { display: inline-grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: #fff; background: var(--chf-blue); }
 .admin-logout { color: var(--chf-deep)!important; font-size: 12px; font-weight: 800; }
@@ -101,21 +103,21 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 .login-back { display: inline-block; margin-top: 23px; color: var(--chf-blue); font-size: 11px; font-weight: 800; }
 .sticky-footer { border-top: 1px solid #e7edf1; }
 
-/* Keep the admin frame fixed and let the central content area scroll. */
+/* Pin the admin frame and give the middle content a definite scroll viewport. */
 html, body#page-top { width: 100%; height: 100%; overflow: hidden !important; overscroll-behavior: none; }
 body#page-top { min-height: 0; }
-#wrapper { display: grid !important; grid-template-columns: 14rem minmax(0, 1fr); width: 100%; height: 100vh; min-height: 0; overflow: hidden; }
+#wrapper { position: relative; display: block !important; width: 100%; height: 100vh; min-height: 0; overflow: hidden; }
 #accordionSidebar { position: fixed; inset: 0 auto 0 0; z-index: 1030; width: 14rem; height: 100vh; overflow: hidden; }
-#content-wrapper { position: relative; grid-column: 2; display: grid; grid-template-rows: minmax(0, 1fr) 4.5rem; width: auto; height: 100vh; min-width: 0; min-height: 0; margin: 0; overflow: hidden; }
-#content { display: grid; grid-template-rows: 4.4rem minmax(0, 1fr); min-height: 0; overflow: hidden; }
-#content > .topbar { position: relative; z-index: 1020; min-height: 4.4rem; margin-bottom: 0 !important; }
-#content > .admin-main { min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
-#content-wrapper > .sticky-footer { display: flex; min-height: 4.5rem; align-items: center; padding: 1rem 0; }
+#content-wrapper { position: fixed; inset: 0 0 0 14rem; display: block !important; width: auto !important; height: 100vh; min-width: 0; min-height: 0; margin: 0 !important; overflow: hidden !important; }
+#content { position: absolute; inset: 0; display: block; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+#content > .topbar { position: absolute; top: 0; right: 0; left: 0; z-index: 1020; display: flex; height: 4.4rem; min-height: 4.4rem; margin: 0 !important; }
+#content > .admin-main { position: absolute; top: 4.4rem; right: 0; bottom: 4.5rem; left: 0; height: auto; min-height: 0; overflow-x: hidden; overflow-y: scroll; overscroll-behavior: contain; }
+#content-wrapper > .sticky-footer { position: absolute; right: 0; bottom: 0; left: 0; display: flex; height: 4.5rem; min-height: 4.5rem; align-items: center; padding: 1rem 0; }
 @media (max-width: 767px) {
     #accordionSidebar { width: 14rem; transform: translateX(-100%); transition: transform .2s ease; }
     body.sidebar-toggled #accordionSidebar { width: 14rem; transform: translateX(0); }
-    #wrapper { grid-template-columns: minmax(0, 1fr); }
-    #content-wrapper, body.sidebar-toggled #content-wrapper { grid-column: 1; width: 100%; margin-left: 0; }
+    #content-wrapper, body.sidebar-toggled #content-wrapper { inset: 0; width: 100% !important; margin-left: 0 !important; }
+    #content > .admin-main { top: 4.4rem; }
     .admin-page-heading { align-items: flex-start; flex-direction: column; }
     .admin-filter-header { align-items: flex-start!important; flex-direction: column; }
     .admin-filters { width: 100%; flex-wrap: wrap; }
