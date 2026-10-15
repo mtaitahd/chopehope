@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PaymentSetting extends Model
 {
-    protected $fillable = ['api_base_url', 'api_key', 'webhook_secret'];
+    protected $fillable = ['api_base_url', 'api_key', 'webhook_secret', 'callback_url'];
 
     protected $hidden = ['api_key', 'webhook_secret'];
 

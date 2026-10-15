@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donation;
+use App\Models\PaymentSetting;
 use App\Services\AblinerApiException;
 use App\Services\AblinerClient;
 use Illuminate\Http\Client\ConnectionException;
@@ -60,7 +61,7 @@ class DonationPaymentController extends Controller
                 'currency' => 'TZS',
                 'phone' => $phone,
                 'reference' => $reference,
-                'callback_url' => route('webhooks.abliner'),
+                'callback_url' => PaymentSetting::current()->callback_url ?: route('webhooks.abliner'),
             ], $idempotencyKey);
 
             $donation->update([

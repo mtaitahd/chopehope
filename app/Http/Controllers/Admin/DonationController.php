@@ -33,12 +33,14 @@ class DonationController extends Controller
         $validated = $request->validate([
             'api_key' => ['nullable', 'string', 'max:500'],
             'webhook_secret' => ['nullable', 'string', 'max:500'],
+            'callback_url' => ['required', 'url', 'max:2048', 'starts_with:https://'],
             'clear_api_key' => ['sometimes', 'boolean'],
             'clear_webhook_secret' => ['sometimes', 'boolean'],
         ]);
 
         $settings = PaymentSetting::current();
         $settings->api_base_url = 'https://abliner.net';
+        $settings->callback_url = trim($validated['callback_url']);
         if (!empty($validated['clear_api_key'])) {
             $settings->api_key = null;
         } elseif (filled($validated['api_key'] ?? null)) {
