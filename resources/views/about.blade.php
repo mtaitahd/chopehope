@@ -60,13 +60,18 @@
         </section>
 
         <section class="about-intro" aria-labelledby="about-intro-title">
-            <div class="container about-intro__copy">
-                <p class="eyebrow eyebrow--light"><span></span> About Children's Hope Foundation</p>
-                <h2 id="about-intro-title">What is CHF?</h2>
-                <p class="about-intro__subtitle">A Moshi-based foundation supporting children with cancer and their families.</p>
-                <div class="about-intro__prose">
-                    <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We help ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
-                    <p>Through our Home Away from Home near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
+            <div class="container about-intro__grid">
+                <div class="about-intro__copy">
+                    <p class="eyebrow eyebrow--light"><span></span> About Children's Hope Foundation</p>
+                    <h2 id="about-intro-title">What is CHF?</h2>
+                    <p class="about-intro__subtitle">A Moshi-based foundation supporting children with cancer and their families.</p>
+                    <div class="about-intro__prose">
+                        <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We help ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
+                        <p>Through our Home Away from Home near KCMC Zonal Referral Hospital, families can find accommodation, meals, transport and psychosocial support while a child receives treatment.</p>
+                    </div>
+                </div>
+                <div class="about-intro__visual about-intro__visual--about">
+                    <img src="{{ asset('images/abaut.png') }}" alt="A child receiving care and support during cancer treatment" loading="lazy">
                 </div>
             </div>
         </section>
