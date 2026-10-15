@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # Use HTTPS and the www hostname as the single canonical site address.
+    RewriteCond %{HTTP_HOST} !^www\.chope\.co\.tz$ [NC,OR]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://www.chope.co.tz%{REQUEST_URI} [R=301,L,NE]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

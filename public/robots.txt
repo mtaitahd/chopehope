@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chope.co.tz/sitemap.xml
+Sitemap: https://www.chope.co.tz/sitemap.xml

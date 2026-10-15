@@ -11,8 +11,7 @@ class SitemapController extends Controller
     public function __invoke(): Response
     {
         $urls = collect();
-        $baseUrl = rtrim((string) config('app.url', 'https://chope.co.tz'), '/');
-        $baseUrl = preg_replace('/^http:/i', 'https:', $baseUrl);
+        $baseUrl = 'https://www.chope.co.tz';
         $add = static function (string $path, ?Carbon $lastModified = null) use ($urls, $baseUrl): void {
             $url = ['loc' => $baseUrl.'/'.ltrim($path, '/')];
 
