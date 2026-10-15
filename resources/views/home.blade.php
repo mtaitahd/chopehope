@@ -32,23 +32,7 @@
             </div>
         </div>
     </header>
-    <nav class="main-nav" aria-label="Main navigation">
-            <div class="container main-nav__inner">
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
-                    <span class="nav-toggle__icon" aria-hidden="true"><i></i><i></i><i></i></span>
-                    <span>Menu</span>
-                </button>
-                <div class="nav-links" id="main-menu">
-                    <a class="nav-link is-active" href="#home">Home</a>
-                    <a class="nav-link" href="{{ route('about') }}">About CHF</a>
-                    <a class="nav-link" href="#services">Our services</a>
-                    <a class="nav-link" href="#cancer-info">Childhood cancer</a>
-                    <a class="nav-link" href="#stories">News &amp; stories</a>
-                    <a class="nav-link" href="#get-involved">Get involved</a>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </div>
-            </div>
-    </nav>
+    @include('partials.main-nav')
 
     <main id="main-content">
         <section class="hero" id="home" aria-labelledby="hero-title">
@@ -238,7 +222,7 @@
                 <a href="#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
                 <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
             </div>
-            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="#about">About CHF</a><a href="#services">Accommodation and meals</a><a href="#services">Transport to KCMC</a><a href="#services">Play and recreation</a><a href="#cancer-info">Childhood cancer</a><a href="#stories">News &amp; stories</a></div>
+            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to KCMC</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="#cancer-info">Childhood cancer</a><a href="#stories">News &amp; stories</a></div>
             <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a><a href="tel:+255795469469">+255 795 469 469</a></div>
             <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="#donate">Support a child <span aria-hidden="true">↗</span></a></div>
         </div>

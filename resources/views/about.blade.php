@@ -33,33 +33,7 @@
         </div>
     </header>
 
-    <nav class="main-nav" aria-label="Main navigation">
-        <div class="container main-nav__inner">
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
-                <span class="nav-toggle__icon" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span>Menu</span>
-            </button>
-            <div class="nav-links" id="main-menu">
-                <a class="nav-link" href="{{ route('home') }}#home">Home</a>
-                <details class="nav-dropdown">
-                    <summary class="nav-link is-active" aria-current="page">About CHF <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
-                    <div class="nav-dropdown__menu">
-                        <a class="nav-dropdown__link" href="{{ route('about') }}" aria-current="page">About overview</a>
-                        <a class="nav-dropdown__link" href="#history">Foundation history</a>
-                        <a class="nav-dropdown__link" href="#mission-vision">Mission &amp; vision</a>
-                        <a class="nav-dropdown__link" href="#objectives">Our objectives</a>
-                        <a class="nav-dropdown__link" href="#support-services">Support services</a>
-                        <a class="nav-dropdown__link" href="#office">Office location</a>
-                    </div>
-                </details>
-                <a class="nav-link" href="{{ route('home') }}#services">Our services</a>
-                <a class="nav-link" href="{{ route('home') }}#cancer-info">Childhood cancer</a>
-                <a class="nav-link" href="{{ route('home') }}#stories">News &amp; stories</a>
-                <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
-                <a class="nav-link" href="{{ route('home') }}#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+    @include('partials.main-nav')
 
     <main id="main-content">
         <section class="hero" id="about-hero" aria-labelledby="hero-title">
@@ -297,7 +271,7 @@
                 <a href="{{ route('home') }}#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
                 <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
             </div>
-            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('home') }}#services">Accommodation and meals</a><a href="{{ route('home') }}#services">Transport to KCMC</a><a href="{{ route('home') }}#services">Play and recreation</a><a href="{{ route('home') }}#cancer-info">Childhood cancer</a><a href="{{ route('home') }}#stories">News &amp; stories</a></div>
+            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to KCMC</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="{{ route('home') }}#cancer-info">Childhood cancer</a><a href="{{ route('home') }}#stories">News &amp; stories</a></div>
             <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a></div>
             <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="{{ route('home') }}#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="{{ route('home') }}#donate">Support a child <span aria-hidden="true">↗</span></a></div>
         </div>
