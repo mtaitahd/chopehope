@@ -59,11 +59,10 @@ button { font: inherit; }
 .nav-dropdown { position: relative; }
 .nav-dropdown > summary { list-style: none; cursor: pointer; }
 .nav-dropdown > summary::-webkit-details-marker { display: none; }
-.nav-dropdown__menu { position: absolute; z-index: 30; top: 100%; left: 0; display: grid; width: 223px; padding: 10px 0; background: #fff; box-shadow: 0 12px 26px rgba(13, 45, 66, .12); }
-.nav-dropdown:hover > .nav-dropdown__menu, .nav-dropdown:focus-within > .nav-dropdown__menu { display: grid; }
+.nav-dropdown__menu { position: absolute; z-index: 30; top: 100%; left: 0; display: none; width: 223px; padding: 10px 0; background: #fff; box-shadow: 0 12px 26px rgba(13, 45, 66, .12); }
+.nav-dropdown:hover > .nav-dropdown__menu, .nav-dropdown:focus-within > .nav-dropdown__menu, .nav-dropdown[open] > .nav-dropdown__menu { display: grid; }
 .nav-dropdown__link { padding: 11px 24px; color: var(--blue); font-size: 14px; font-weight: 500; letter-spacing: 0; line-height: 1.35; text-transform: none; transition: color .18s ease, background-color .18s ease; }
 .nav-dropdown__link:hover, .nav-dropdown__link:focus-visible { color: var(--blue-deep); background: var(--mist); }
-.nav-dropdown:not([open]):not(:hover):not(:focus-within) > .nav-dropdown__menu { display: none; }
 .nav-dropdown__menu { width: 270px; border-top: 3px solid var(--green); }
 .nav-dropdown--programs .nav-dropdown__menu { width: 290px; }
 .nav-dropdown--services .nav-dropdown__menu { width: 300px; }
