@@ -221,18 +221,16 @@
                 </div>
             </div>
             <div class="container about-office__content">
-                @php
-                    // Static office entry for now; this can be replaced by admin-managed locations later.
-                    $officeLocations = [[
+                @foreach ([
+                    [
                         'name' => "Children's Hope Foundation Office",
                         'subtitle' => 'Office & Home Away from Home',
                         'address' => 'Moshi, Kilimanjaro, Tanzania',
                         'landmark' => 'Near KCMC Zonal Referral Hospital',
                         'image' => 'images/leftcard.jpg',
                         'gallery' => ['images/lefttop.jpg', 'images/lefttp.jpg', 'images/hero3.jpg', 'images/hero4.jpg'],
-                    ]];
-                @endphp
-                @foreach ($officeLocations as $office)
+                    ],
+                ] as $office)
                     <article class="about-office-card">
                         <div class="about-office-card__gallery" aria-label="Five photos showing CHF care and support">
                             <img class="about-office-card__main-image" src="{{ asset($office['image']) }}" alt="A health worker supporting a child during treatment" loading="lazy">
