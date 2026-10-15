@@ -14,7 +14,7 @@
 <body id="page-top">
 <div id="wrapper">
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}"><span class="sidebar-brand__logo"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation logo"></span><span class="sidebar-brand-text mx-2">CHF <small>Publishing</small></span></a>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}"><span class="sidebar-brand__logo"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation logo" width="40" height="40"></span><span class="sidebar-brand-text mx-2">CHF <small>Publishing</small></span></a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.dashboard') }}"><i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span></a></li>
         <hr class="sidebar-divider"><div class="sidebar-heading">Publishing</div>

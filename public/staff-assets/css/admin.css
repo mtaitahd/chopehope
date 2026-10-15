@@ -4,9 +4,9 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 .sidebar { width: 14rem; flex: 0 0 14rem; background: linear-gradient(180deg, #07548e, #063b66); }
 .sidebar .sidebar-brand { height: 5rem; color: #fff; background: transparent; }
 .sidebar-brand__logo, .login-brand__logo { display: grid; flex: 0 0 auto; place-items: center; padding: 4px; overflow: hidden; border-radius: 9px; background: #fff; }
-.sidebar-brand__logo { width: 48px; height: 48px; }
-.sidebar-brand__logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.sidebar-brand-text { color: #fff; font-weight: 900; letter-spacing: .04em; }
+.sidebar-brand__logo { width: 44px; height: 44px; }
+.sidebar-brand__logo img { display: block; width: 100%; max-width: 40px; height: 100%; max-height: 40px; object-fit: contain; }
+.sidebar-brand-text { color: #fff; font-size: .82rem; font-weight: 900; letter-spacing: .04em; }
 .sidebar-brand-text small { display: block; color: rgba(255,255,255,.67); font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .sidebar .sidebar-heading { color: rgba(255,255,255,.58); }
 .sidebar .nav-item .nav-link { color: rgba(255,255,255,.78); font-weight: 700; }
@@ -87,10 +87,11 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 .hero-editor .card-body { display: grid; gap: 2px; }
 .login-panel { width: min(100% - 32px, 440px); margin: 7vh auto; padding: 39px; border: 1px solid #e3ebef; border-radius: 12px; background: #fff; box-shadow: 0 22px 70px rgba(12,57,81,.16); }
 .admin-login { min-height: 100vh; padding-top: 1px; background: linear-gradient(135deg,#eaf5fa,#f6f8f5); }
-.login-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; color: var(--chf-deep); font-size: 16px; font-weight: 900; text-decoration: none; }
+.login-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; color: var(--chf-deep); font-size: 15px; font-weight: 900; line-height: 1.3; text-decoration: none; }
 .login-brand:hover { color: var(--chf-blue); text-decoration: none; }
-.login-brand__logo { width: 68px; height: 68px; border: 1px solid #e7edf1; border-radius: 12px; }
-.login-brand__logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.login-brand__logo { width: 66px; height: 66px; border: 1px solid #e7edf1; border-radius: 10px; }
+.login-brand__logo img { display: block; width: 100%; max-width: 62px; height: 100%; max-height: 62px; object-fit: contain; }
+.login-brand__name { min-width: 0; }
 .login-brand small { display: block; color: var(--chf-muted); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 .login-panel h1 { margin: 0; color: var(--chf-deep); font-size: 31px; font-weight: 900; }
 .login-intro { margin: 7px 0 25px; color: var(--chf-muted); font-size: 13px; }
