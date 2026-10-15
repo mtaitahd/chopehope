@@ -882,6 +882,8 @@ button { font: inherit; }
 .donation-account__number { color: var(--blue-dark); font-family: var(--font-display); font-size: clamp(34px, 5vw, 52px); font-weight: 900; letter-spacing: .035em; line-height: 1.1; }
 .donation-account__rule { width: 100%; height: 1px; margin-block: 9px; background: var(--line); }
 .donation-account > strong { color: var(--blue-dark); font-size: clamp(16px, 2vw, 20px); letter-spacing: .025em; line-height: 1.4; }
+.donation-account .donation-mobile-trigger { width: 100%; margin-top: 12px; }
+.donation-account .donation-mobile-hint { color: var(--muted); }
 .contact-location { padding-block: 84px 92px; background: var(--mist); }
 .contact-location__layout { display: grid; grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(38px, 7vw, 88px); }
 .contact-location__copy h2 { max-width: 510px; }
