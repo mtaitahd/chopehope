@@ -36,7 +36,14 @@
                     @endforeach
                 </div>
             </details>
-            <a class="nav-link" href="{{ route('home') }}#stories">News &amp; stories</a>
+            <details class="nav-dropdown nav-dropdown--news">
+                <summary class="nav-link {{ request()->routeIs('news.*') ? 'is-active' : '' }}" @if(request()->routeIs('news.*')) aria-current="page" @endif>News &amp; stories <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
+                <div class="nav-dropdown__menu">
+                    <a class="nav-dropdown__link" href="{{ route('news.index') }}">News &amp; updates</a>
+                    <a class="nav-dropdown__link" href="{{ route('news.events') }}">Events</a>
+                    <a class="nav-dropdown__link" href="{{ route('news.vacancies') }}">Vacancies</a>
+                </div>
+            </details>
             <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
             <a class="nav-link" href="{{ route('home') }}#contact">Contact</a>
         </div>

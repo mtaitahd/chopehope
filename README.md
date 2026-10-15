@@ -1,10 +1,18 @@
 # Children's Hope Foundation website
 
-This is the first Laravel homepage for Children's Hope Foundation (CHF). It uses the supplied CHF logo and the three supplied hero images. The navigation items link to sections on the homepage so the menu works while the remaining site pages are planned.
+Laravel website for Children's Hope Foundation (CHF), including program pages, childhood cancer information, News & Stories pages, and a staff publishing portal.
+
+## News & Stories
+
+The public pages are `/news`, `/events`, and `/vacancies`. News and letters appear together on `/news`. Published items have their own detail page and can have an individual hero image.
+
+## Staff portal
+
+Admins and managers sign in at `/admin/login`. Both roles can draft and publish news, letters, events and vacancies. Both can edit the hero image, title and introduction on the homepage, About, programs, childhood cancer, news, events, vacancies, every individual program and every childhood cancer topic. Admins can also create and suspend manager accounts.
 
 ## Local setup
 
-The project targets Laravel 12 and PHP 8.2. After network access to Packagist is available, install the framework dependencies and start the local server:
+The project targets Laravel 12 and PHP 8.2. Install framework dependencies and start the local server:
 
 ```powershell
 composer install
@@ -13,8 +21,14 @@ php artisan key:generate
 php artisan serve
 ```
 
-Then open the local address printed by Artisan. The page styles and scripts are served directly from `public/`; no separate frontend build is needed for this homepage.
+## First production setup
 
-## Image files
+Configure the production database in `.env`, deploy the files, then run:
 
-Place replacement photos in `public/images/` and update the corresponding references in `resources/views/home.blade.php`. The originals supplied for this first pass are kept at the project root.
+```sh
+php artisan migrate --force
+php artisan storage:link
+php artisan chf:staff-create --role=admin
+```
+
+The account command asks interactively for the first administrator's name, email and password. Run it with `--role=manager` to create a manager from the server terminal. Admins can also create and suspend managers in the portal.

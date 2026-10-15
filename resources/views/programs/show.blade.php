@@ -22,16 +22,17 @@
         </div>
     </header>
     @include('partials.main-nav')
+    @php($pageHero = \App\Support\PageHeroContent::get('program-'.$slug))
 
     <main id="main-content" class="program-page">
         <section class="program-hero" aria-labelledby="program-hero-title">
-            <img class="program-hero__image" src="{{ asset($program['image']) }}" alt="{{ $program['image_alt'] }}" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="{{ $program['image_alt'] }}" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> {{ $program['eyebrow'] }} · Moshi, Tanzania</p>
-                    <h1 id="program-hero-title">{{ $program['title'] }} <em>{{ $program['highlight'] }}</em></h1>
-                    <p class="hero__lead">{{ $program['lead'] }}</p>
+                    <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+                    <h1 id="program-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
+                    <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#program-details">Discover this program <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('programs.index') }}">All programs</a></div>
                 </div>
                 <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Children and caregivers</strong><small>Support through treatment</small></div>

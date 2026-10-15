@@ -35,15 +35,17 @@
 
     @include('partials.main-nav')
 
+    @php($pageHero = \App\Support\PageHeroContent::get('about'))
+
     <main id="main-content">
         <section class="hero" id="about-hero" aria-labelledby="hero-title">
-            <img class="hero__image" src="{{ asset('images/hero4.jpg') }}" alt="A child smiling while receiving care" fetchpriority="high">
+            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A child smiling while receiving care" fetchpriority="high">
             <div class="hero__veil" aria-hidden="true"></div>
             <div class="container hero__inner">
                 <div class="hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> Children's Hope Foundation · Moshi, Tanzania</p>
-                    <h1 id="hero-title">A place of hope, <em>close to care.</em></h1>
-                    <p class="hero__lead">Learn how Children’s Hope Foundation supports children with cancer and their caregivers throughout treatment in Moshi.</p>
+                    <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+                    <h1 id="hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
+                    <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <div class="hero__actions">
                         <a class="button button--orange" href="{{ route('home') }}#donate">Support a child <span aria-hidden="true">→</span></a>
                         <a class="button button--outline-light" href="#support-services">Explore our services</a>

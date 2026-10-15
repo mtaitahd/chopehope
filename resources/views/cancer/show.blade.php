@@ -20,14 +20,15 @@
         <div class="brand-actions" aria-label="Quick links"><a class="button button--orange button--small" href="{{ route('home') }}#donate">Donate</a><a class="button button--yellow button--small" href="{{ route('home') }}#get-involved">Get involved</a><a class="button button--blue button--small" href="{{ route('home') }}#contact">Contact CHF</a></div>
     </div></header>
     @include('partials.main-nav')
+    @php($pageHero = \App\Support\PageHeroContent::get('cancer-'.$slug))
     <main id="main-content" class="program-page cancer-topic-page">
         <section class="program-hero cancer-topic-hero" aria-labelledby="cancer-hero-title">
-            <img class="program-hero__image" src="{{ asset($topic['image']) }}" alt="{{ $topic['image_alt'] }}" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="{{ $topic['image_alt'] }}" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
-                <p class="eyebrow eyebrow--light"><span></span> {{ $topic['eyebrow'] }} · Childhood cancer</p>
-                <h1 id="cancer-hero-title">{{ $topic['title'] }} <em>{{ $topic['highlight'] }}</em></h1>
-                <p class="hero__lead">{{ $topic['lead'] }}</p>
+                <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+                <h1 id="cancer-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
+                <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                 <div class="program-hero__actions"><a class="button button--yellow" href="#topic-details">Read this topic <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('cancer.index') }}">All topics</a></div>
             </div><div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Children and caregivers</strong><small>Support through the journey</small></div></div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>

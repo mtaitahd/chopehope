@@ -22,16 +22,17 @@
         </div>
     </header>
     @include('partials.main-nav')
+    @php($pageHero = \App\Support\PageHeroContent::get('programs'))
 
     <main id="main-content" class="program-page">
         <section class="program-hero program-hero--index" aria-labelledby="program-hero-title">
-            <img class="program-hero__image" src="{{ asset('images/leftcard.jpg') }}" alt="A caregiver supporting a child" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A caregiver supporting a child" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> Care around the treatment journey</p>
-                    <h1 id="program-hero-title">Support shaped around <em>each family.</em></h1>
-                    <p class="hero__lead">Explore the practical, emotional and community support Children’s Hope Foundation provides for children with cancer and their caregivers.</p>
+                    <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+                    <h1 id="program-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
+                    <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <a class="button button--yellow" href="#program-list">Explore our programs <span aria-hidden="true">↓</span></a>
                 </div>
                 <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>One family at a time</strong><small>Support in Moshi, Tanzania</small></div>

@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ContentController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PageHeroController;
+use App\Http\Controllers\Admin\StaffController;
+use App\Http\Controllers\Auth\StaffAuthController;
+use App\Http\Controllers\PublicNewsController;
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
@@ -32,3 +38,31 @@ Route::get('/childhood-cancer/{slug}', function (string $slug) {
         'topics' => config('cancer_topics'),
     ]);
 })->name('cancer.show');
+
+Route::get('/news', [PublicNewsController::class, 'updates'])->name('news.index');
+Route::get('/events', [PublicNewsController::class, 'events'])->name('news.events');
+Route::get('/vacancies', [PublicNewsController::class, 'vacancies'])->name('news.vacancies');
+Route::get('/news/{slug}', [PublicNewsController::class, 'show'])->name('news.show');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::middleware('guest')->group(function () {
+        Route::get('/login', [StaffAuthController::class, 'create'])->name('login');
+        Route::post('/login', [StaffAuthController::class, 'store'])->middleware('throttle:6,1')->name('login.store');
+    });
+
+    Route::middleware('staff:admin,manager')->group(function () {
+        Route::get('/', DashboardController::class)->name('dashboard');
+        Route::post('/logout', [StaffAuthController::class, 'destroy'])->name('logout');
+        Route::resource('content', ContentController::class)->except('show');
+        Route::get('/heroes', [PageHeroController::class, 'edit'])->name('heroes.edit');
+        Route::put('/heroes/{key}', [PageHeroController::class, 'update'])->name('heroes.update');
+        Route::post('/content/{content}/publish', [ContentController::class, 'publish'])->name('content.publish');
+        Route::post('/content/{content}/unpublish', [ContentController::class, 'unpublish'])->name('content.unpublish');
+    });
+
+    Route::middleware('staff:admin')->group(function () {
+        Route::get('/managers', [StaffController::class, 'index'])->name('managers.index');
+        Route::post('/managers', [StaffController::class, 'store'])->name('managers.store');
+        Route::patch('/managers/{user}/status', [StaffController::class, 'updateStatus'])->name('managers.status');
+    });
+});

@@ -20,14 +20,15 @@
         <div class="brand-actions" aria-label="Quick links"><a class="button button--orange button--small" href="{{ route('home') }}#donate">Donate</a><a class="button button--yellow button--small" href="{{ route('home') }}#get-involved">Get involved</a><a class="button button--blue button--small" href="{{ route('home') }}#contact">Contact CHF</a></div>
     </div></header>
     @include('partials.main-nav')
+    @php($pageHero = \App\Support\PageHeroContent::get('cancer'))
     <main id="main-content" class="program-page cancer-topic-page">
         <section class="program-hero cancer-topic-hero" aria-labelledby="cancer-hero-title">
-            <img class="program-hero__image" src="{{ asset('images/hero3.jpg') }}" alt="A healthcare worker supporting a child" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A healthcare worker supporting a child" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
-                <p class="eyebrow eyebrow--light"><span></span> Understanding childhood cancer</p>
-                <h1 id="cancer-hero-title">Knowledge, care <em>and support.</em></h1>
-                <p class="hero__lead">Explore clear information about childhood cancer and find ways to support children and caregivers through the journey.</p>
+                <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+                <h1 id="cancer-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
+                <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                 <a class="button button--yellow" href="#cancer-topics">Explore topics <span aria-hidden="true">↓</span></a>
             </div><div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Care for the whole family</strong><small>Children's Hope Foundation</small></div></div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
