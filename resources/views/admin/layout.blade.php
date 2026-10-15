@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('staff-assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('staff-assets/vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('staff-assets/css/ruang-admin.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('staff-assets/css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('staff-assets/css/admin.css') }}?v={{ filemtime(public_path('staff-assets/css/admin.css')) }}">
     @stack('styles')
 </head>
 <body id="page-top">
