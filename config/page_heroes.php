@@ -27,4 +27,10 @@ return [
         'intro' => 'Explore clear information about childhood cancer and find ways to support children and caregivers through the journey.',
         'image_path' => 'images/hero3.jpg',
     ],
+    'contact' => [
+        'label' => 'Contact CHF', 'group' => 'Main pages',
+        'eyebrow' => "Children's Hope Foundation · Moshi, Tanzania", 'title' => "Let's talk.", 'highlight' => "We're here to help.",
+        'intro' => 'Reach our team for information about family support, partnerships, donations or visiting CHF near KCMC in Moshi.',
+        'image_path' => 'images/callphone.jpg',
+    ],
 ];

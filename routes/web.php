@@ -10,6 +10,9 @@ use App\Http\Controllers\PublicNewsController;
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
+Route::get('/contact', function () {
+    return view('contact', ['hero' => \App\Support\PageHeroContent::get('contact')]);
+})->name('contact');
 Route::get('/programs', function () {
     return view('programs.index', ['programs' => config('programs')]);
 })->name('programs.index');

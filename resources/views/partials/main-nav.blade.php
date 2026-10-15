@@ -45,7 +45,7 @@
                 </div>
             </details>
             <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
-            <a class="nav-link" href="{{ route('home') }}#contact">Contact</a>
+            <a class="nav-link {{ request()->routeIs('contact') ? 'is-active' : '' }}" href="{{ route('contact') }}" @if(request()->routeIs('contact')) aria-current="page" @endif>Contact</a>
         </div>
     </div>
 </nav>
