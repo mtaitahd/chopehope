@@ -1,7 +1,7 @@
 @extends('admin.layout')
 @section('title', 'Page hero images')
 @section('content')
-<div class="admin-page-heading"><div><p class="eyebrow">SITE DESIGN</p><h1>Page hero images</h1><p>Update hero images and headings for all main pages, programs, childhood cancer topics and News &amp; Stories pages. Each story can also have its own image.</p></div></div>
+<div class="admin-page-heading"><div><p class="eyebrow">SITE DESIGN</p><h1>Page hero images</h1><p>Update hero images and headings for main pages, programs, services, Get Involved pages, childhood cancer topics and News &amp; Stories pages. Each story can also have its own image.</p></div></div>
 @foreach($groups as $groupName => $heroes)
 <section class="hero-settings-group"><div class="hero-settings-group__heading"><h2>{{ $groupName }}</h2><span>{{ $heroes->count() }} pages</span></div><div class="row">
 @foreach($heroes as $hero)

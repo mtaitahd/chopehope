@@ -10,6 +10,30 @@ use App\Http\Controllers\PublicNewsController;
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
+Route::get('/services/{slug}', function (string $slug) {
+    $page = config("service_pages.{$slug}");
+    abort_unless($page, 404);
+
+    return view('info.show', [
+        'page' => $page,
+        'pageType' => 'service',
+        'hero' => \App\Support\PageHeroContent::get('service-'.$slug),
+        'relatedPages' => config('service_pages'),
+        'routeName' => 'services.show',
+    ]);
+})->name('services.show');
+Route::get('/get-involved/{slug}', function (string $slug) {
+    $page = config("involvement_pages.{$slug}");
+    abort_unless($page, 404);
+
+    return view('info.show', [
+        'page' => $page,
+        'pageType' => 'involvement',
+        'hero' => \App\Support\PageHeroContent::get('involvement-'.$slug),
+        'relatedPages' => config('involvement_pages'),
+        'routeName' => 'involved.show',
+    ]);
+})->name('involved.show');
 Route::get('/contact', function () {
     return view('contact', ['hero' => \App\Support\PageHeroContent::get('contact')]);
 })->name('contact');

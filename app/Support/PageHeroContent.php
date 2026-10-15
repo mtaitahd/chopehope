@@ -25,6 +25,20 @@ class PageHeroContent
             ];
         }
 
+        foreach (config('service_pages') as $slug => $page) {
+            $pages['service-'.$slug] = [
+                'label' => 'Service: '.$page['name'], 'group' => 'Our services pages', 'eyebrow' => $page['eyebrow'],
+                'title' => $page['title'], 'highlight' => $page['highlight'], 'intro' => $page['lead'], 'image_path' => $page['image'],
+            ];
+        }
+
+        foreach (config('involvement_pages') as $slug => $page) {
+            $pages['involvement-'.$slug] = [
+                'label' => 'Get involved: '.$page['name'], 'group' => 'Get involved pages', 'eyebrow' => $page['eyebrow'],
+                'title' => $page['title'], 'highlight' => $page['highlight'], 'intro' => $page['lead'], 'image_path' => $page['image'],
+            ];
+        }
+
         foreach (config('news_pages') as $key => $page) {
             $pages[$key]['group'] = 'News & Stories pages';
         }

@@ -17,7 +17,14 @@
                     <a class="nav-dropdown__link" href="{{ route('about') }}#office">Office location</a>
                 </div>
             </details>
-            <a class="nav-link" href="{{ route('home') }}#services">Our services</a>
+            <details class="nav-dropdown nav-dropdown--services">
+                <summary class="nav-link {{ request()->routeIs('services.*') ? 'is-active' : '' }}" @if(request()->routeIs('services.*')) aria-current="page" @endif>Our services <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
+                <div class="nav-dropdown__menu">
+                    @foreach(config('service_pages') as $slug => $service)
+                        <a class="nav-dropdown__link" href="{{ route('services.show', ['slug' => $slug]) }}">{{ $service['name'] }}</a>
+                    @endforeach
+                </div>
+            </details>
             <details class="nav-dropdown nav-dropdown--programs">
                 <summary class="nav-link {{ request()->routeIs('programs.*') ? 'is-active' : '' }}" @if(request()->routeIs('programs.*')) aria-current="page" @endif>Programs <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
                 <div class="nav-dropdown__menu">
@@ -44,7 +51,14 @@
                     <a class="nav-dropdown__link" href="{{ route('news.vacancies') }}">Vacancies</a>
                 </div>
             </details>
-            <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
+            <details class="nav-dropdown nav-dropdown--involved">
+                <summary class="nav-link {{ request()->routeIs('involved.*') ? 'is-active' : '' }}" @if(request()->routeIs('involved.*')) aria-current="page" @endif>Get involved <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
+                <div class="nav-dropdown__menu">
+                    @foreach(config('involvement_pages') as $slug => $opportunity)
+                        <a class="nav-dropdown__link" href="{{ route('involved.show', ['slug' => $slug]) }}">{{ $opportunity['name'] }}</a>
+                    @endforeach
+                </div>
+            </details>
             <a class="nav-link {{ request()->routeIs('contact') ? 'is-active' : '' }}" href="{{ route('contact') }}" @if(request()->routeIs('contact')) aria-current="page" @endif>Contact</a>
         </div>
     </div>
