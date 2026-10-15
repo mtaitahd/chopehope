@@ -1,7 +1,7 @@
 @extends('admin.layout')
 @section('title', 'Donations')
 @section('content')
-<div class="admin-page-heading"><div><p class="eyebrow">GIVING</p><h1>Donations</h1><p>Mobile money payment activity and confirmed gifts.</p></div><a class="btn btn-outline-primary" href="{{ route('admin.payment-settings.edit') }}"><i class="fas fa-cog mr-2"></i>Payment settings</a></div>
+<div class="admin-page-heading"><div><p class="eyebrow">GIVING</p><h1><span class="admin-page-heading__icon" aria-hidden="true"><i class="fas fa-hand-holding-heart"></i></span>Donations</h1><p>Mobile money payment activity and confirmed gifts.</p></div><a class="btn btn-outline-primary" href="{{ route('admin.payment-settings.edit') }}"><i class="fas fa-cog mr-2"></i>Payment settings</a></div>
 <div class="row admin-metrics">
     <div class="col-xl-4 col-md-6 mb-4"><div class="card metric-card metric-card--green"><div class="card-body"><span>Confirmed donations</span><strong>{{ number_format($completedTotal) }} <small>TZS</small></strong><i class="fas fa-heart"></i></div></div></div>
     <div class="col-xl-4 col-md-6 mb-4"><div class="card metric-card metric-card--orange"><div class="card-body"><span>Awaiting payment</span><strong>{{ $pendingCount }}</strong><i class="fas fa-hourglass-half"></i></div></div></div>

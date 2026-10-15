@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') · CHF Publishing</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v={{ filemtime(public_path('images/chf-logo.png')) }}">
     <link rel="stylesheet" href="{{ asset('staff-assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('staff-assets/vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('staff-assets/css/ruang-admin.min.css') }}">
