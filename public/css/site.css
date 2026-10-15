@@ -68,6 +68,7 @@ button { font: inherit; }
 .nav-dropdown:not([open]):not(:hover):not(:focus-within) > .nav-dropdown__menu { display: none; }
 .nav-dropdown__menu { width: 270px; border-top: 3px solid var(--green); }
 .nav-dropdown--programs .nav-dropdown__menu { width: 290px; }
+.nav-dropdown--cancer .nav-dropdown__menu { width: 310px; max-height: min(70vh, 560px); overflow-y: auto; overscroll-behavior: contain; }
 .nav-dropdown__link--all { display: flex; align-items: center; justify-content: space-between; color: var(--blue-dark); font-weight: 800; }
 .nav-dropdown__link--all span { color: var(--orange); font-size: 19px; }
 
@@ -401,6 +402,7 @@ button { font: inherit; }
     .nav-dropdown__menu { position: static; min-width: 0; padding: 0 0 5px 9px; border-top: 0; border-left: 2px solid var(--green); background: transparent; box-shadow: none; }
     .nav-dropdown__link { display: block; padding: 8px 12px; font-size: 12px; }
     .nav-dropdown__menu, .nav-dropdown--programs .nav-dropdown__menu { width: auto; }
+    .nav-dropdown--cancer .nav-dropdown__menu { width: auto; max-height: none; overflow: visible; }
     .about-intro { padding-block: 58px 65px; }
     .about-intro__grid, .about-story__grid { grid-template-columns: 1fr; gap: 36px; }
     .about-intro__visual { min-height: 340px; padding: 0 24px 24px 0; }
@@ -588,6 +590,13 @@ button { font: inherit; }
 .program-cta h2 { margin: 0; color: #fff; font-family: var(--font-display); font-size: clamp(29px, 3.6vw, 40px); font-weight: 900; letter-spacing: -.025em; line-height: 1.1; }
 .program-cta p:not(.eyebrow) { margin: 8px 0 0; color: rgba(255,255,255,.84); }
 
+/* Childhood cancer information pages */
+.cancer-info-note { display: flex; align-items: flex-start; gap: 15px; margin-top: 35px; padding: 19px 22px; border-left: 4px solid var(--yellow); background: var(--mist); }
+.cancer-info-note > span { display: grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; border-radius: 50%; color: #fff; background: var(--blue); font-family: var(--font-display); font-size: 16px; font-weight: 900; }
+.cancer-info-note p { margin: 1px 0 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.cancer-topic-feature { background: #fff; }
+.cancer-related { background: var(--mist); }
+
 @media (max-width: 1000px) {
     .nav-link { padding-inline: 8px; font-size: 11px; letter-spacing: .045em; }
     .nav-link::after { right: 8px; left: 8px; }
@@ -618,6 +627,7 @@ button { font: inherit; }
     .related-programs__grid { grid-template-columns: 1fr; gap: 8px; }
     .program-cta { padding-block: 37px; }
     .program-cta__inner { align-items: flex-start; flex-direction: column; }
+    .cancer-info-note { gap: 11px; margin-top: 24px; padding: 15px; }
 }
 
 /* About page refresh: match the supplied reference layout while keeping CHF colours. */

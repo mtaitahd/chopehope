@@ -27,7 +27,15 @@
                     @endforeach
                 </div>
             </details>
-            <a class="nav-link" href="{{ route('home') }}#cancer-info">Childhood cancer</a>
+            <details class="nav-dropdown nav-dropdown--cancer">
+                <summary class="nav-link {{ request()->routeIs('cancer.*') ? 'is-active' : '' }}" @if(request()->routeIs('cancer.*')) aria-current="page" @endif>Childhood cancer <span class="nav-dropdown__chevron" aria-hidden="true">⌄</span></summary>
+                <div class="nav-dropdown__menu">
+                    <a class="nav-dropdown__link nav-dropdown__link--all" href="{{ route('cancer.index') }}">All topics <span aria-hidden="true">→</span></a>
+                    @foreach(config('cancer_topics') as $slug => $topic)
+                        <a class="nav-dropdown__link" href="{{ route('cancer.show', ['slug' => $slug]) }}">{{ $topic['name'] }}</a>
+                    @endforeach
+                </div>
+            </details>
             <a class="nav-link" href="{{ route('home') }}#stories">News &amp; stories</a>
             <a class="nav-link" href="{{ route('home') }}#get-involved">Get involved</a>
             <a class="nav-link" href="{{ route('home') }}#contact">Contact</a>

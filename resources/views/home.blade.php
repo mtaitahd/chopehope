@@ -69,7 +69,7 @@
                 <span class="intro-card__text">Discover the Moshi-based foundation supporting children through the treatment journey.</span>
                 <span class="intro-card__link">About CHF <b aria-hidden="true">↗</b></span>
             </a>
-            <a class="intro-card intro-card--green" href="#cancer-info">
+            <a class="intro-card intro-card--green" href="{{ route('cancer.index') }}">
                 <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 41S7 31 7 18c0-5 4-9 9-9 4 0 7 2 8 6 2-4 5-6 9-6 5 0 8 4 8 9 0 13-17 23-17 23ZM24 15v14M17 22h14"/></svg></span>
                 <span class="intro-card__title">Childhood cancer</span>
                 <span class="intro-card__text">Awareness, early detection and timely care can make a difference in a child's journey.</span>
@@ -175,7 +175,7 @@
             <article class="action-card action-card--green">
                 <span class="action-card__icon" aria-hidden="true">↗</span><h3>Share hope with others.</h3>
                 <p>Help grow awareness of childhood cancer and the importance of seeking care early.</p>
-                <a class="button button--dark" href="#cancer-info">Learn about awareness</a>
+                <a class="button button--dark" href="{{ route('cancer.index') }}">Learn about awareness</a>
             </article>
         </section>
 
@@ -222,7 +222,7 @@
                 <a href="#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
                 <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
             </div>
-            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to KCMC</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="#cancer-info">Childhood cancer</a><a href="#stories">News &amp; stories</a></div>
+            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to KCMC</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="{{ route('cancer.index') }}">Childhood cancer information</a><a href="#stories">News &amp; stories</a></div>
             <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a><a href="tel:+255795469469">+255 795 469 469</a></div>
             <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="#donate">Support a child <span aria-hidden="true">↗</span></a></div>
         </div>

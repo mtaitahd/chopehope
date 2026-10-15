@@ -18,3 +18,17 @@ Route::get('/programs/{slug}', function (string $slug) {
         'programs' => config('programs'),
     ]);
 })->name('programs.show');
+Route::get('/childhood-cancer', function () {
+    return view('cancer.index', ['topics' => config('cancer_topics')]);
+})->name('cancer.index');
+Route::get('/childhood-cancer/{slug}', function (string $slug) {
+    $topic = config("cancer_topics.{$slug}");
+
+    abort_unless($topic, 404);
+
+    return view('cancer.show', [
+        'slug' => $slug,
+        'topic' => $topic,
+        'topics' => config('cancer_topics'),
+    ]);
+})->name('cancer.show');
