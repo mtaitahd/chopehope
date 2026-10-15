@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - /bin/cp /home/chopecot/chopehope/public/css/site.css /home/chopecot/public_html/css/site.css
+    - /bin/mkdir -p /home/chopecot/public_html/admin
+    - /bin/cp -R /home/chopecot/chopehope/public/admin/. /home/chopecot/public_html/admin/
     - cd /home/chopecot/chopehope && php artisan optimize:clear
