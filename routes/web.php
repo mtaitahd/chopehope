@@ -5,7 +5,10 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PageHeroController;
 use App\Http\Controllers\Admin\StaffController;
+use App\Http\Controllers\Admin\DonationController as AdminDonationController;
 use App\Http\Controllers\Auth\StaffAuthController;
+use App\Http\Controllers\DonationPaymentController;
+use App\Http\Controllers\AblinerWebhookController;
 use App\Http\Controllers\PublicNewsController;
 
 Route::view('/', 'home')->name('home');
@@ -71,6 +74,10 @@ Route::get('/events', [PublicNewsController::class, 'events'])->name('news.event
 Route::get('/vacancies', [PublicNewsController::class, 'vacancies'])->name('news.vacancies');
 Route::get('/news/{slug}', [PublicNewsController::class, 'show'])->name('news.show');
 
+Route::post('/donate/mobile-money', [DonationPaymentController::class, 'store'])->middleware('throttle:5,1')->name('donate.mobile-money');
+Route::get('/donate/mobile-money/{donation:public_id}', [DonationPaymentController::class, 'status'])->middleware('throttle:30,1')->name('donate.mobile-money.status');
+Route::post('/webhooks/abliner', AblinerWebhookController::class)->name('webhooks.abliner');
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('/login', [StaffAuthController::class, 'create'])->name('login');
@@ -92,5 +99,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/managers', [StaffController::class, 'store'])->name('managers.store');
         Route::put('/managers/{user}', [StaffController::class, 'update'])->name('managers.update');
         Route::patch('/managers/{user}/status', [StaffController::class, 'updateStatus'])->name('managers.status');
+        Route::get('/donations', [AdminDonationController::class, 'index'])->name('donations.index');
+        Route::get('/payment-settings', [AdminDonationController::class, 'settings'])->name('payment-settings.edit');
+        Route::put('/payment-settings', [AdminDonationController::class, 'saveSettings'])->name('payment-settings.update');
     });
 });

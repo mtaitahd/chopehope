@@ -623,6 +623,25 @@ button { font: inherit; }
 .info-donation-account__details span { color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .info-donation-account__details strong { color: var(--blue-dark); font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 900; line-height: 1.2; }
 .info-donation-account__details b { color: var(--blue-dark); font-size: 14px; }
+.donation-mobile-trigger { width: fit-content; margin-top: 14px; }
+.donation-mobile-hint { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.donation-dialog { width: min(92vw, 520px); max-width: 520px; max-height: min(90vh, 780px); padding: 30px; border: 0; border-radius: 18px; color: var(--ink); box-shadow: 0 24px 80px rgba(5, 36, 55, .3); }
+.donation-dialog::backdrop { background: rgba(5, 31, 49, .68); backdrop-filter: blur(3px); }
+.donation-dialog__header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.donation-dialog__header .eyebrow { margin: 0 0 8px; }
+.donation-dialog__header h2 { margin: 0; color: var(--blue-dark); font-family: var(--font-display); font-size: 27px; font-weight: 900; }
+.donation-dialog__close { width: 38px; height: 38px; border: 0; border-radius: 50%; color: var(--blue-dark); background: var(--mist); font-size: 25px; cursor: pointer; }
+.donation-dialog__intro { margin: 14px 0 20px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.donation-dialog form { display: grid; gap: 9px; }
+.donation-dialog form label { margin-top: 7px; color: var(--blue-dark); font-size: 13px; font-weight: 800; }
+.donation-dialog form input { width: 100%; min-height: 48px; padding: 10px 13px; border: 1px solid #d6e2e9; border-radius: 8px; color: var(--ink); background: #fff; font: inherit; }
+.donation-dialog form input:focus { outline: 3px solid rgba(19, 127, 189, .17); border-color: var(--blue); }
+.donation-dialog form small { margin-top: -5px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.donation-dialog__submit { justify-content: center; width: 100%; margin-top: 10px; }
+.donation-dialog__submit:disabled { cursor: wait; opacity: .68; }
+.donation-dialog__status { margin: 8px 0 0; padding: 13px 15px; border-radius: 8px; color: var(--blue-dark); background: var(--mist); font-size: 14px; line-height: 1.5; }
+.donation-dialog__status[data-state="completed"] { color: #185d2c; background: #e9f7eb; }
+.donation-dialog__status[data-state="failed"] { color: #8b2e18; background: #fff0eb; }
 .info-feature { padding-block: 70px 88px; background: #fff; }
 .info-feature--journey, .info-feature--volunteer { background: var(--mist); }
 .info-feature--family, .info-feature--partnership { background: #fffaf2; }

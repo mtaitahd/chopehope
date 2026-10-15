@@ -53,6 +53,9 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 .admin-table td small { display: block; max-width: 300px; margin-top: 3px; overflow: hidden; color: var(--chf-muted); text-overflow: ellipsis; white-space: nowrap; }
 .status-pill { display: inline-block; padding: 4px 8px; border-radius: 30px; color: #845c00; background: #fff2ce; font-size: 10px; font-weight: 900; }
 .status-pill--published { color: #34701b; background: #e5f5db; }
+.status-pill--completed { color: #34701b; background: #e5f5db; }
+.status-pill--pending { color: #8a5b00; background: #fff3cd; }
+.status-pill--failed { color: #9c2f26; background: #fde8e6; }
 .table-action { display: inline-block; padding: 3px 5px; border: 0; color: var(--chf-blue); background: transparent; font-size: 11px; font-weight: 800; cursor: pointer; }
 .table-action--danger { color: #bc4c36; }
 .actions-cell { min-width: 205px; white-space: nowrap; }

@@ -23,6 +23,8 @@
         @if(auth()->user()->isAdmin())
             <hr class="sidebar-divider"><div class="sidebar-heading">Access</div>
             <li class="nav-item {{ request()->routeIs('admin.managers.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.managers.index') }}"><i class="fas fa-fw fa-user-shield"></i><span>Managers</span></a></li>
+            <li class="nav-item {{ request()->routeIs('admin.donations.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.donations.index') }}"><i class="fas fa-fw fa-hand-holding-heart"></i><span>Donations</span></a></li>
+            <li class="nav-item {{ request()->routeIs('admin.payment-settings.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.payment-settings.edit') }}"><i class="fas fa-fw fa-credit-card"></i><span>Payment settings</span></a></li>
         @endif
         <hr class="sidebar-divider"><li class="nav-item"><a class="nav-link" href="{{ route('home') }}" target="_blank"><i class="fas fa-fw fa-external-link-alt"></i><span>View website</span></a></li>
         <div class="sidebar-card"><p class="mb-2">Hope, love and support for children with cancer.</p><strong>Children's Hope Foundation</strong></div>
