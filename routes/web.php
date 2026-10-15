@@ -90,6 +90,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('staff:admin')->group(function () {
         Route::get('/managers', [StaffController::class, 'index'])->name('managers.index');
         Route::post('/managers', [StaffController::class, 'store'])->name('managers.store');
+        Route::put('/managers/{user}', [StaffController::class, 'update'])->name('managers.update');
         Route::patch('/managers/{user}/status', [StaffController::class, 'updateStatus'])->name('managers.status');
     });
 });

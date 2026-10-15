@@ -20,12 +20,14 @@ class ContentController extends Controller
             ->when($request->filled('status'), fn ($query) => $query->where('status', $request->input('status')))
             ->latest()->paginate(15)->withQueryString();
 
-        return view('admin.content.index', ['items' => $items, 'types' => config('news_content.types')]);
+        $modalItem = $request->filled('edit') ? ContentItem::findOrFail($request->integer('edit')) : null;
+
+        return view('admin.content.index', ['items' => $items, 'types' => config('news_content.types'), 'modalItem' => $modalItem]);
     }
 
-    public function create(): View
+    public function create(): RedirectResponse
     {
-        return view('admin.content.form', ['item' => new ContentItem(), 'types' => config('news_content.types')]);
+        return redirect()->route('admin.content.index', ['create' => 1]);
     }
 
     public function store(Request $request): RedirectResponse
@@ -38,12 +40,12 @@ class ContentController extends Controller
 
         $item = ContentItem::create($data);
 
-        return redirect()->route('admin.content.edit', $item)->with('status', 'Content saved.');
+        return redirect()->route('admin.content.index')->with('status', 'Content saved.');
     }
 
-    public function edit(ContentItem $content): View
+    public function edit(ContentItem $content): RedirectResponse
     {
-        return view('admin.content.form', ['item' => $content, 'types' => config('news_content.types')]);
+        return redirect()->route('admin.content.index', ['edit' => $content->id]);
     }
 
     public function update(Request $request, ContentItem $content): RedirectResponse
@@ -60,7 +62,7 @@ class ContentController extends Controller
 
         $content->update($data);
 
-        return redirect()->route('admin.content.edit', $content)->with('status', 'Content updated.');
+        return redirect()->route('admin.content.index')->with('status', 'Content updated.');
     }
 
     public function destroy(ContentItem $content): RedirectResponse

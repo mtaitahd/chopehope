@@ -39,6 +39,7 @@
         </div>
     </div><footer class="sticky-footer bg-white"><div class="container my-auto"><div class="copyright text-center my-auto"><span>© {{ date('Y') }} Children's Hope Foundation</span></div></div></footer></div>
 </div>
+@stack('modals')
 <script src="{{ asset('staff-assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('staff-assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('staff-assets/js/ruang-admin.min.js') }}"></script>
