@@ -103,10 +103,10 @@ body { color: var(--chf-ink); background: #f4f7f9; font-family: "Nunito Sans", N
 
 /* Keep the admin frame in place and give scrolling to the page content only. */
 html, body#page-top { height: 100%; }
-body#page-top { min-height: 0; overflow: hidden; }
-#wrapper { height: 100vh; min-height: 0; overflow: hidden; }
-#accordionSidebar { position: fixed; inset: 0 auto 0 0; z-index: 1030; width: 14rem; height: 100vh; overflow-x: hidden; overflow-y: auto; }
-#content-wrapper { display: flex; flex-direction: column; width: calc(100% - 14rem); height: 100vh; min-width: 0; min-height: 0; margin-left: 14rem; overflow: hidden; }
+body#page-top { position: fixed; inset: 0; width: 100%; min-height: 0; overflow: hidden; }
+#wrapper { position: relative; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+#accordionSidebar { position: fixed; inset: 0 auto 0 0; z-index: 1030; width: 14rem; height: 100%; overflow-x: hidden; overflow-y: auto; }
+#content-wrapper { position: fixed; inset: 0 0 0 14rem; display: flex; flex-direction: column; width: auto; height: 100%; min-width: 0; min-height: 0; margin: 0; overflow: hidden; }
 #content { display: flex; flex: 1 1 0%; flex-direction: column; min-height: 0; overflow: hidden; }
 #content > .topbar { position: relative; z-index: 1020; flex: 0 0 auto; margin-bottom: 0 !important; }
 #content > .admin-main { flex: 1 1 0%; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
@@ -114,7 +114,7 @@ body#page-top { min-height: 0; overflow: hidden; }
 @media (max-width: 767px) {
     #accordionSidebar { width: 14rem; transform: translateX(-100%); transition: transform .2s ease; }
     body.sidebar-toggled #accordionSidebar { width: 14rem; transform: translateX(0); }
-    #content-wrapper, body.sidebar-toggled #content-wrapper { width: 100%; margin-left: 0; }
+    #content-wrapper, body.sidebar-toggled #content-wrapper { inset: 0; width: 100%; margin-left: 0; }
     .admin-page-heading { align-items: flex-start; flex-direction: column; }
     .admin-filter-header { align-items: flex-start!important; flex-direction: column; }
     .admin-filters { width: 100%; flex-wrap: wrap; }
