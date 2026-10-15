@@ -626,6 +626,9 @@ button { font: inherit; }
 .donation-mobile-trigger { width: fit-content; margin-top: 14px; }
 .donation-mobile-hint { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .donation-dialog { width: min(92vw, 520px); max-width: 520px; max-height: min(90vh, 780px); padding: 30px; border: 0; border-radius: 18px; color: var(--ink); box-shadow: 0 24px 80px rgba(5, 36, 55, .3); }
+.donation-dialog:not([open]) { display: none; }
+.donation-dialog.is-open { position: fixed; z-index: 1000; inset: auto; top: 50%; left: 50%; display: block; margin: 0; overflow-y: auto; transform: translate(-50%, -50%); box-shadow: 0 0 0 100vmax rgba(5, 31, 49, .68), 0 24px 80px rgba(5, 36, 55, .3); }
+.has-donation-dialog { overflow: hidden; }
 .donation-dialog::backdrop { background: rgba(5, 31, 49, .68); backdrop-filter: blur(3px); }
 .donation-dialog__header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
 .donation-dialog__header .eyebrow { margin: 0 0 8px; }

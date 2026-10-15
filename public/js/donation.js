@@ -6,14 +6,42 @@
     const status = dialog.querySelector('[data-donation-status]');
     const submit = dialog.querySelector('[data-donation-submit]');
     const defaultButtonText = submit.innerHTML;
+    const supportsNativeDialog = typeof dialog.showModal === 'function';
     let activePublicId = null;
     let polling = false;
 
-    document.querySelectorAll('[data-donation-open]').forEach((button) => button.addEventListener('click', () => dialog.showModal()));
-    dialog.querySelector('[data-donation-close]').addEventListener('click', () => dialog.close());
+    const openDialog = () => {
+        if (supportsNativeDialog) {
+            dialog.showModal();
+        } else {
+            dialog.setAttribute('open', '');
+            dialog.classList.add('is-open');
+            document.body.classList.add('has-donation-dialog');
+        }
+        const firstInput = dialog.querySelector('input');
+        if (firstInput) firstInput.focus();
+    };
+
+    const closeDialog = () => {
+        if (supportsNativeDialog) {
+            dialog.close();
+        } else {
+            dialog.removeAttribute('open');
+            dialog.classList.remove('is-open');
+            document.body.classList.remove('has-donation-dialog');
+        }
+    };
+
+    document.querySelectorAll('[data-donation-open]').forEach((button) => button.addEventListener('click', openDialog));
+    dialog.querySelector('[data-donation-close]').addEventListener('click', closeDialog);
     dialog.addEventListener('click', (event) => {
-        if (event.target === dialog) dialog.close();
+        if (event.target === dialog) closeDialog();
     });
+    if (!supportsNativeDialog) {
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && dialog.classList.contains('is-open')) closeDialog();
+        });
+    }
 
     const showStatus = (message, state = 'pending') => {
         status.textContent = message;
