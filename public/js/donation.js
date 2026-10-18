@@ -5,6 +5,7 @@
 
     const status = dialog.querySelector('[data-donation-status]');
     const submit = dialog.querySelector('[data-donation-submit]');
+    const bankDetails = dialog.querySelector('[data-donation-bank]');
     const defaultButtonText = submit.innerHTML;
     const supportsNativeDialog = typeof dialog.showModal === 'function';
     let activePublicId = null;
@@ -65,6 +66,7 @@
                 const response = await fetch(url, { headers: { Accept: 'application/json' }, cache: 'no-store' });
                 const result = await response.json();
                 if (result.status === 'completed' || result.status === 'failed') {
+                    bankDetails.hidden = result.bank_transfer_available !== true;
                     showStatus(result.message, result.status);
                     setBusy(false);
                     activePublicId = null;
@@ -86,6 +88,7 @@
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
         status.hidden = true;
+        bankDetails.hidden = true;
         setBusy(true);
 
         try {
@@ -97,11 +100,13 @@
             const result = await response.json();
 
             if (!response.ok) {
+                bankDetails.hidden = result.bank_transfer_available !== true;
                 const firstValidationError = result.errors ? Object.values(result.errors).flat()[0] : null;
                 throw new Error(firstValidationError || result.message || 'We could not start your donation. Please try again.');
             }
 
             activePublicId = result.public_id;
+            submit.textContent = 'Checking payment status…';
             showStatus(result.message, 'pending');
             await pollDonation(activePublicId);
         } catch (error) {

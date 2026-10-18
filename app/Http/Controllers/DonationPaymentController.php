@@ -23,7 +23,7 @@ class DonationPaymentController extends Controller
         ]);
 
         if (!$abliner->configured()) {
-            return response()->json(['message' => 'Mobile money donations are being set up. Please use the bank transfer details for now.'], 503);
+            return response()->json(['message' => 'Mobile money is currently unavailable. Please donate using the CHF account details below instead.', 'bank_transfer_available' => true], 503);
         }
 
         $activeDonation = Donation::where('public_id', $request->session()->get('active_donation_public_id'))
@@ -75,7 +75,11 @@ class DonationPaymentController extends Controller
             $donation->update(['provider_error_code' => $exception->providerCode]);
             if ($exception->definitiveRejection) {
                 $donation->update(['status' => 'failed']);
-                return response()->json(['message' => $exception->getMessage()], 422);
+                $request->session()->forget('active_donation_public_id');
+                return response()->json([
+                    'message' => 'We could not process your mobile money donation. Please use the CHF account details below instead. Thank you for your support.',
+                    'bank_transfer_available' => true,
+                ], 422);
             }
 
             report($exception);
@@ -126,10 +130,11 @@ class DonationPaymentController extends Controller
 
         return response()->json([
             'status' => $record->status,
+            'bank_transfer_available' => $record->status === 'failed',
             'message' => match ($record->status) {
                 'completed' => 'Thank you for supporting Children’s Hope Foundation. Your donation has been received.',
-                'failed' => 'The payment was not completed. You can try again or use the bank transfer details.',
-                default => 'Waiting for your mobile money approval. Please check your phone.',
+                'failed' => 'Your mobile money payment was not completed. Please use the CHF account details below instead.',
+                default => 'Your mobile money payment is still being checked. If a prompt arrives, approve it on your phone. Please wait for confirmation before making another payment.',
             },
         ]);
     }

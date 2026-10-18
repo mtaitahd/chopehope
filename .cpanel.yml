@@ -1,6 +1,8 @@
 ---
 deployment:
   tasks:
+    - /bin/mkdir -p /home/chopecot/public_html/js
+    - /bin/cp -f /home/chopecot/chopehope/public/js/donation.js /home/chopecot/public_html/js/donation.js
     - /bin/cp /home/chopecot/chopehope/public/css/site.css /home/chopecot/public_html/css/site.css
     - /bin/mkdir -p /home/chopecot/public_html/staff-assets
     - /bin/cp -R /home/chopecot/chopehope/public/staff-assets/. /home/chopecot/public_html/staff-assets/
