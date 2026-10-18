@@ -34,7 +34,7 @@
                     <p class="hero__lead">{{ $hero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#contact-details">Get in touch <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="#donate">Make a donation</a></div>
                 </div>
-                <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Here for children and families</strong><small>Moshi, Tanzania · Near the hospital</small></div>
+
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>

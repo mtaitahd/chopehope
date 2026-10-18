@@ -35,7 +35,7 @@
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <a class="button button--yellow" href="#program-list">Explore our programs <span aria-hidden="true">↓</span></a>
                 </div>
-                <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>One family at a time</strong><small>Support in Moshi, Tanzania</small></div>
+
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>

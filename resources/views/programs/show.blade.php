@@ -35,7 +35,7 @@
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#program-details">Discover this program <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('programs.index') }}">All programs</a></div>
                 </div>
-                <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Children and caregivers</strong><small>Support through treatment</small></div>
+
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>

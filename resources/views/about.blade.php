@@ -51,10 +51,7 @@
                         <a class="button button--outline-light" href="#support-services">Explore our services</a>
                     </div>
                 </div>
-                <div class="hero-note">
-                    <span class="hero-note__icon" aria-hidden="true">♡</span>
-                    <span><strong>A home away from home</strong><small>Close to care at the nearby hospital</small></span>
-                </div>
+
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>

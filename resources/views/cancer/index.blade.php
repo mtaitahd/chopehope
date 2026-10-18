@@ -30,7 +30,7 @@
                 <h1 id="cancer-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                 <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                 <a class="button button--yellow" href="#cancer-topics">Explore topics <span aria-hidden="true">↓</span></a>
-            </div><div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Care for the whole family</strong><small>Children's Hope Foundation</small></div></div>
+            </div></div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>
         <section class="cancer-context container" aria-labelledby="cancer-context-title">

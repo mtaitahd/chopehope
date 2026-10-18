@@ -34,7 +34,7 @@
                     <p class="hero__lead">{{ $hero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#page-details">Explore this page <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('contact') }}">Talk with CHF</a></div>
                 </div>
-                <div class="program-hero__note"><span aria-hidden="true">{{ $pageType === 'service' ? '♡' : '✳' }}</span><strong>{{ $pageType === 'service' ? 'Practical care, close by' : 'Every act of care matters' }}</strong><small>Moshi, Tanzania · Near the hospital</small></div>
+
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>
