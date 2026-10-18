@@ -6,6 +6,7 @@
         </button>
         <div class="nav-links" id="main-menu">
             <a class="nav-link {{ request()->routeIs('home') ? 'is-active' : '' }}" href="{{ route('home') }}#home">Home</a>
+            <a class="nav-link {{ request()->routeIs('team') ? 'is-active' : '' }}" href="{{ route('team') }}" @if(request()->routeIs('team')) aria-current="page" @endif>Our Team</a>
             <details class="nav-dropdown" onmouseenter="this.open = true" onmouseleave="this.open = false">
                 <summary class="nav-link {{ request()->routeIs('about') ? 'is-active' : '' }}" @if(request()->routeIs('about')) aria-current="page" @endif>About CHF</summary>
                 <div class="nav-dropdown__menu">

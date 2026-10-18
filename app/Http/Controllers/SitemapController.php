@@ -24,6 +24,7 @@ class SitemapController extends Controller
 
         $add(route('home', [], false));
         $add(route('about', [], false));
+        $add(route('team', [], false));
 
         foreach (array_keys(config('service_pages', [])) as $slug) {
             $add(route('services.show', ['slug' => $slug], false));

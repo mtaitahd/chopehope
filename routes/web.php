@@ -15,6 +15,7 @@ use App\Http\Controllers\SitemapController;
 Route::view('/', 'home')->name('home');
 Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 Route::view('/about', 'about')->name('about');
+Route::get('/our-team', fn () => view('team', ['members' => \App\Models\TeamMember::where('is_published', true)->orderBy('sort_order')->orderBy('name')->get()]))->name('team');
 Route::get('/services/{slug}', function (string $slug) {
     $page = config("service_pages.{$slug}");
     abort_unless($page, 404);
@@ -97,6 +98,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
 
     Route::middleware('staff:admin')->group(function () {
+        Route::resource('team', \App\Http\Controllers\Admin\TeamMemberController::class)->except('show');
         Route::get('/managers', [StaffController::class, 'index'])->name('managers.index');
         Route::post('/managers', [StaffController::class, 'store'])->name('managers.store');
         Route::put('/managers/{user}', [StaffController::class, 'update'])->name('managers.update');

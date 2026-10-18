@@ -944,3 +944,16 @@ button { font: inherit; }
 @media (max-width: 430px) {
     .cancer-stat-grid { grid-template-columns: 1fr; }
 }
+
+/* Team directory */
+.team-section { padding: 80px 0; background: #f4fafb; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
+.team-card { overflow: hidden; border-radius: 8px 8px 32px 8px; background: #fff; box-shadow: var(--shadow); border-bottom: 4px solid var(--green); }
+.team-card__photo, .team-card__placeholder { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.team-card__placeholder { display: grid; place-items: center; background: #dceff2; color: var(--blue-deep); font: 900 80px var(--font-display); }
+.team-card__body { padding: 28px; overflow-wrap: anywhere; }
+.team-card h3 { margin: 10px 0; font: 900 26px var(--font-display); }
+.team-card__bio { white-space: pre-line; line-height: 1.75; }
+.team-empty { grid-column: 1 / -1; padding: 40px; background: white; border-left: 5px solid var(--yellow); }
+@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } .team-section { padding: 48px 0; } }

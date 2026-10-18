@@ -22,6 +22,7 @@
         <li class="nav-item {{ request()->routeIs('admin.content.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.content.index') }}"><i class="fas fa-fw fa-newspaper"></i><span>News &amp; content</span></a></li>
         <li class="nav-item {{ request()->routeIs('admin.heroes.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.heroes.edit') }}"><i class="fas fa-fw fa-images"></i><span>Page hero images</span></a></li>
         @if(auth()->user()->isAdmin())
+            <li class="nav-item {{ request()->routeIs('admin.team.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.team.index') }}"><i class="fas fa-fw fa-users"></i><span>Our Team</span></a></li>
             <hr class="sidebar-divider"><div class="sidebar-heading">Access</div>
             <li class="nav-item {{ request()->routeIs('admin.managers.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.managers.index') }}"><i class="fas fa-fw fa-user-shield"></i><span>Managers</span></a></li>
             <li class="nav-item {{ request()->routeIs('admin.donations.*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin.donations.index') }}"><i class="fas fa-fw fa-hand-holding-heart"></i><span>Donations</span></a></li>
