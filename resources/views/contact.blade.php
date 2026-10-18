@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#137fbd">
-    <meta name="description" content="Contact Children's Hope Foundation in Moshi, Tanzania, for family support, partnerships, donations and directions to our office near KCMC.">
+    <meta name="description" content="Contact Children's Hope Foundation in Moshi, Tanzania, for family support, partnerships, donations and directions to our office near the hospital.">
     <title>Contact CHF in Moshi, Tanzania | Children's Hope Foundation</title>
     <link rel="icon" type="image/png" href="{{ asset('images/chf-logo.png') }}?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,18 +34,18 @@
                     <p class="hero__lead">{{ $hero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#contact-details">Get in touch <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="#donate">Make a donation</a></div>
                 </div>
-                <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Here for children and families</strong><small>Moshi, Tanzania · Near KCMC</small></div>
+                <div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Here for children and families</strong><small>Moshi, Tanzania · Near the hospital</small></div>
             </div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>
 
         <section class="contact-details" id="contact-details" aria-labelledby="contact-details-title">
             <div class="container">
-                <div class="contact-section-heading"><p class="eyebrow"><span></span> Contact CHF</p><h2 id="contact-details-title">We would be glad to hear from you.</h2><p>Our team is based in Moshi, close to KCMC Zonal Referral Hospital.</p></div>
+                <div class="contact-section-heading"><p class="eyebrow"><span></span> Contact CHF</p><h2 id="contact-details-title">We would be glad to hear from you.</h2><p>Our team is based in Moshi, close to the hospital.</p></div>
                 <div class="contact-card-grid">
                     <a class="contact-info-card contact-info-card--phone" href="tel:+255795469469"><span class="contact-info-card__icon" aria-hidden="true">☎</span><span class="contact-info-card__label">Call our team</span><strong>+255 795 469 469</strong><span class="contact-info-card__action">Call CHF <b aria-hidden="true">↗</b></span></a>
                     <a class="contact-info-card contact-info-card--email" href="mailto:homeofchildrens26@gmail.com"><span class="contact-info-card__icon" aria-hidden="true">✉</span><span class="contact-info-card__label">Send us an email</span><strong>homeofchildrens26@gmail.com</strong><span class="contact-info-card__action">Email CHF <b aria-hidden="true">↗</b></span></a>
-                    <a class="contact-info-card contact-info-card--place" href="#find-us"><span class="contact-info-card__icon" aria-hidden="true">⌖</span><span class="contact-info-card__label">Visit our office</span><strong>Moshi, Kilimanjaro</strong><span class="contact-info-card__detail">Near KCMC Zonal Referral Hospital</span><span class="contact-info-card__action">View the map <b aria-hidden="true">↓</b></span></a>
+                    <a class="contact-info-card contact-info-card--place" href="#find-us"><span class="contact-info-card__icon" aria-hidden="true">⌖</span><span class="contact-info-card__label">Visit our office</span><strong>Moshi, Kilimanjaro</strong><span class="contact-info-card__detail">Near the hospital</span><span class="contact-info-card__action">View the map <b aria-hidden="true">↓</b></span></a>
                 </div>
             </div>
         </section>
@@ -59,8 +59,8 @@
 
         <section class="contact-location" id="find-us" aria-labelledby="contact-location-title">
             <div class="container contact-location__layout">
-                <div class="contact-location__copy"><p class="eyebrow"><span></span> Find us in Moshi</p><h2 id="contact-location-title">Close to KCMC. Here for families.</h2><p>Children's Hope Foundation is based near KCMC Zonal Referral Hospital in Moshi, Kilimanjaro, Tanzania.</p><p class="contact-location__note">The map points to KCMC and the surrounding area. Contact us for directions to the CHF office.</p><a class="button button--blue" href="https://www.google.com/maps/search/?api=1&query=KCMC+Zonal+Referral+Hospital%2C+Moshi%2C+Tanzania" target="_blank" rel="noopener">Open directions <span aria-hidden="true">↗</span></a></div>
-                <div class="contact-map"><iframe title="Map showing KCMC Zonal Referral Hospital in Moshi, near the CHF office" src="https://www.google.com/maps?q=KCMC+Zonal+Referral+Hospital,+Moshi,+Tanzania&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+                <div class="contact-location__copy"><p class="eyebrow"><span></span> Find us in Moshi</p><h2 id="contact-location-title">Close to the hospital. Here for families.</h2><p>Children's Hope Foundation is based near the hospital in Moshi, Kilimanjaro, Tanzania.</p><p class="contact-location__note">Our office is on Kitandu Street, near Shanty, Longuo Ward, Moshi. The map shows the surrounding area; contact us for directions to the CHF home.</p><a class="button button--blue" href="https://www.google.com/maps/search/?api=1&query=Kitandu+Street%2C+Longuo%2C+Moshi%2C+Tanzania" target="_blank" rel="noopener">Open directions <span aria-hidden="true">↗</span></a></div>
+                <div class="contact-map"><iframe title="Map showing the Kitandu Street area in Longuo, Moshi" src="https://www.google.com/maps?q=Kitandu+Street,+Longuo,+Moshi,+Tanzania&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
             </div>
         </section>
     </main>

@@ -6,4 +6,6 @@ deployment:
     - /bin/cp -R /home/chopecot/chopehope/public/staff-assets/. /home/chopecot/public_html/staff-assets/
     - /bin/mkdir -p /home/chopecot/public_html/images
     - /bin/cp -f /home/chopecot/chopehope/public/images/chf-logo.png /home/chopecot/public_html/images/chf-logo.png
+    - /bin/cp -f /home/chopecot/chopehope/public/images/chf-*.jpeg /home/chopecot/public_html/images/
+    - cd /home/chopecot/chopehope && php artisan migrate --force
     - cd /home/chopecot/chopehope && php artisan optimize:clear

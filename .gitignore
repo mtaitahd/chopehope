@@ -17,3 +17,7 @@
 /yarn-error.log
 /.idea
 /.vscode
+/tmp/
+/database/*.sqlite
+/database/*.sqlite-*
+/public/storage

@@ -19,7 +19,7 @@
     <header class="site-header">
         <div class="container brand-row">
             <a class="brand" href="#home" aria-label="Children's Hope Foundation home">
-                <img src="{{ asset('images/chf-logo.png') }}" alt="Chope Foundation — caring for children in Tanzania" width="500" height="500">
+                <img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation logo" width="500" height="500">
             </a>
             <div class="brand-message">
                 <span class="brand-message__eyebrow">Children's Hope Foundation</span>
@@ -38,7 +38,7 @@
 
     <main id="main-content">
         <section class="hero" id="home" aria-labelledby="hero-title">
-            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A child smiling while receiving care" fetchpriority="high">
+            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Children and caregivers taking part in an outdoor art activity at CHF" fetchpriority="high">
             <div class="hero__veil" aria-hidden="true"></div>
             <div class="container hero__inner">
                 <div class="hero__copy">
@@ -55,30 +55,45 @@
         </section>
 
         <section class="intro-cards" aria-label="Explore Children's Hope Foundation">
-            <a class="intro-card intro-card--orange" href="#get-involved">
-                <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 25h9l5 5h11l5-5 5 4-8 9H19l-7-5H7zM13 20c0-3 2-5 5-5 2 0 4 2 6 5 2-3 4-5 6-5 3 0 5 2 5 5 0 4-6 8-11 12-5-4-11-8-11-12Z"/></svg></span>
-                <span class="intro-card__title">Get involved</span>
-                <span class="intro-card__text">Your support can help provide food, hygiene supplies and practical care for families.</span>
-                <span class="intro-card__link">See how to help <b aria-hidden="true">↗</b></span>
-            </a>
-            <a class="intro-card intro-card--yellow" href="#about">
-                <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 21 24 6l19 15M10 19v23h28V19M19 42V28h10v14M19 19h.1M29 19h.1"/></svg></span>
-                <span class="intro-card__title">Get to know us</span>
-                <span class="intro-card__text">Discover the Moshi-based foundation supporting children through the treatment journey.</span>
-                <span class="intro-card__link">About CHF <b aria-hidden="true">↗</b></span>
-            </a>
             <a class="intro-card intro-card--green" href="{{ route('cancer.index') }}">
                 <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 41S7 31 7 18c0-5 4-9 9-9 4 0 7 2 8 6 2-4 5-6 9-6 5 0 8 4 8 9 0 13-17 23-17 23ZM24 15v14M17 22h14"/></svg></span>
                 <span class="intro-card__title">Childhood cancer</span>
-                <span class="intro-card__text">Awareness, early detection and timely care can make a difference in a child's journey.</span>
+                <span class="intro-card__text">Learn about childhood cancer, signs to discuss with a health professional and the support available to families.</span>
                 <span class="intro-card__link">Learn more <b aria-hidden="true">↗</b></span>
             </a>
+            <a class="intro-card intro-card--yellow" href="#about">
+                <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 21 24 6l19 15M10 19v23h28V19M19 42V28h10v14M19 19h.1M29 19h.1"/></svg></span>
+                <span class="intro-card__title">Who we are</span>
+                <span class="intro-card__text">Meet CHF, a local foundation in Moshi supporting children with cancer and their caregivers.</span>
+                <span class="intro-card__link">About CHF <b aria-hidden="true">↗</b></span>
+            </a>
+            <a class="intro-card intro-card--orange" href="#get-involved">
+                <span class="intro-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 25h9l5 5h11l5-5 5 4-8 9H19l-7-5H7zM13 20c0-3 2-5 5-5 2 0 4 2 6 5 2-3 4-5 6-5 3 0 5 2 5 5 0 4-6 8-11 12-5-4-11-8-11-12Z"/></svg></span>
+                <span class="intro-card__title">Get involved</span>
+                <span class="intro-card__text">Help provide meals, hygiene supplies, learning materials and emotional support for children and caregivers.</span>
+                <span class="intro-card__link">See how to help <b aria-hidden="true">↗</b></span>
+            </a>
+        </section>
+
+        <section class="cancer-section" id="cancer-info" aria-labelledby="cancer-title">
+            <div class="container cancer-section__inner">
+                <div class="cancer-section__copy">
+                    <p class="eyebrow eyebrow--light"><span></span> Awareness matters</p>
+                    <h2 id="cancer-title">Childhood cancer in Tanzania.</h2>
+                    <p>CHF supports increased awareness of childhood cancer, early detection and timely medical care. Families should be able to seek help without distance or poverty standing in the way.</p>
+                    @include('partials.cancer-statistics')
+                    <a class="button button--outline-light" href="{{ route('cancer.index') }}">Learn about childhood cancer</a>
+                </div>
+                <div class="cancer-section__image">
+                    <img src="{{ asset('images/chf-child-painting.jpeg') }}" alt="A child painting during an art activity at CHF" loading="lazy">
+                </div>
+            </div>
         </section>
 
         <section class="pillars" id="about" aria-labelledby="pillars-title">
             <div class="container pillars__inner">
                 <div class="section-heading section-heading--center">
-                    <p class="eyebrow"><span></span> A little hope goes a long way</p>
+                    <p class="eyebrow"><span></span> Who we are</p>
                     <h2 id="pillars-title">Care that reaches beyond the hospital</h2>
                     <p>For a family travelling for treatment, support with the everyday needs can help make the journey more manageable.</p>
                 </div>
@@ -89,7 +104,7 @@
                     </article>
                     <article class="pillar">
                         <span class="pillar__icon pillar__icon--orange" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 13h23v23H8zM31 21h6l5 7v8H31zM14 40a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM36 40a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM13 20h13M13 26h9"/></svg></span>
-                        <div><h3>A safer trip to care</h3><p>Transport between the foundation's home and KCMC appointments, with a safe return.</p></div>
+                        <div><h3>A safer trip to care</h3><p>Transport between the foundation's home and hospital appointments, with a safe return.</p></div>
                     </article>
                     <article class="pillar">
                         <span class="pillar__icon pillar__icon--green" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 41S7 31 7 18c0-5 4-9 9-9 4 0 7 2 8 6 2-4 5-6 9-6 5 0 8 4 8 9 0 13-17 23-17 23ZM17 24h14M24 17v14"/></svg></span>
@@ -99,55 +114,58 @@
             </div>
         </section>
 
+        <section class="home-purpose" aria-labelledby="purpose-title">
+            <div class="container">
+                <div class="section-heading section-heading--center"><p class="eyebrow"><span></span> Our purpose</p><h2 id="purpose-title">Hope, love and support.</h2></div>
+                <div class="home-purpose__grid">
+                    <article><p class="eyebrow"><span></span> Our vision</p><h3>Accessible care for every child.</h3><p>To see every child with cancer in Tanzania receive accessible, quality care in a safe and supportive environment.</p></article>
+                    <article><p class="eyebrow"><span></span> Our mission</p><h3>Support throughout treatment and beyond.</h3><p>To give hope, share love, and support children with cancer and their caregivers throughout the treatment journey and beyond.</p></article>
+                </div>
+            </div>
+        </section>
+
         <section class="service-feature" id="services" aria-labelledby="services-title">
             <div class="container service-feature__inner">
                 <div class="service-feature__visual">
-                    <img src="{{ asset('images/lefttp.jpg') }}" alt="A child resting in a hospital bed beside a healthcare worker" loading="lazy">
+                    <img src="{{ asset('images/chf-family-activities.jpeg') }}" alt="Children and caregivers taking part in activities in the CHF garden" loading="lazy">
                     <span class="photo-caption"><span class="photo-caption__dot"></span> Care, comfort and connection</span>
                     <span class="visual-sun" aria-hidden="true"></span>
                 </div>
                 <div class="service-feature__copy">
                     <p class="eyebrow"><span></span> Our core services</p>
-                    <h2 id="services-title">A little more support at every step.</h2>
-                    <p class="service-feature__lead">Treatment is only one part of a family's journey. We help ease some of the practical and emotional pressures around it.</p>
+                    <h2 id="services-title">Support for children and their caregivers.</h2>
+                    <p class="service-feature__lead">CHF supports children and caregivers with accommodation, nutrition, transport, psychosocial care and opportunities to play and learn.</p>
                     <ul class="service-list">
-                        <li><span aria-hidden="true">✓</span> Free accommodation and meals</li>
-                        <li><span aria-hidden="true">✓</span> Transport to and from KCMC</li>
+                        <li><span aria-hidden="true">✓</span> Free accommodation and nutritional support</li>
+                        <li><span aria-hidden="true">✓</span> Transport to and from the nearby hospital</li>
                         <li><span aria-hidden="true">✓</span> Play, recreation and art activities</li>
                         <li><span aria-hidden="true">✓</span> Counselling and caregiver support</li>
+                        <li><span aria-hidden="true">✓</span> Education support and learning activities</li>
                     </ul>
                     <a class="text-link" href="#get-involved">See how you can support <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
 
-        <section class="cancer-section" id="cancer-info" aria-labelledby="cancer-title">
-            <div class="container cancer-section__inner">
-                <div class="cancer-section__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> Awareness matters</p>
-                    <h2 id="cancer-title">Every child deserves a chance to get care early.</h2>
-                    <p>CHF supports increased awareness of childhood cancer, early detection and timely medical care. Families should be able to seek help without distance or poverty standing in the way.</p>
-                    <a class="button button--outline-light" href="#contact">Talk with CHF</a>
-                </div>
-                <div class="cancer-section__image">
-                    <img src="{{ asset('images/second section.jpg') }}" alt="A child smiling with a teddy bear in a hospital" loading="lazy">
-                </div>
-            </div>
-        </section>
+
 
         <section class="stories container" id="stories" aria-labelledby="stories-title">
             <div class="section-heading section-heading--row">
-                <div><p class="eyebrow"><span></span> Learn about our work</p><h2 id="stories-title">Hope is built through everyday care.</h2></div>
-                <p>From a warm meal to the journey back to an appointment, every act of care helps families feel supported.</p>
+                <div><p class="eyebrow"><span></span> Learn about our work</p><h2 id="stories-title">Care, learning and support at CHF.</h2></div>
+                <p>Our work brings together nutrition, emotional support, learning activities, play and a safe place to stay.</p>
             </div>
             <div class="story-grid">
                 <article class="story-card">
                     <div class="story-card__image story-card__image--home"><span class="story-label">Home away from home</span></div>
-                    <div class="story-card__body"><span class="story-card__tag">Practical support</span><h3>A welcoming place close to treatment</h3><p>Our support facility near KCMC gives children and caregivers a safe place to rest during treatment.</p><a href="#services" class="text-link">Explore our services <span aria-hidden="true">→</span></a></div>
+                    <div class="story-card__body"><span class="story-card__tag">Family support</span><h3>More than a place to stay</h3><p>Children and caregivers can access free accommodation and meals, alongside transport, play and psychosocial support.</p><a href="#services" class="text-link">Explore our services <span aria-hidden="true">→</span></a></div>
                 </article>
                 <article class="story-card">
                     <div class="story-card__image story-card__image--care"><span class="story-label">Care for caregivers</span></div>
                     <div class="story-card__body"><span class="story-card__tag">Emotional support</span><h3>Families need care, too</h3><p>Guidance, counselling and peer support help caregivers face the challenges of long-term treatment.</p><a href="#services" class="text-link">How CHF helps <span aria-hidden="true">→</span></a></div>
+                </article>
+                <article class="story-card">
+                    <div class="story-card__image story-card__image--learning"><span class="story-label">Play and learning</span></div>
+                    <div class="story-card__body"><span class="story-card__tag">Education support</span><h3>Room to learn and create</h3><p>CHF’s education support objective recognises that children need opportunities to learn alongside their care. Contact our team to discuss available support.</p><a href="{{ route('programs.show', ['slug' => 'education-support']) }}" class="text-link">Explore education support <span aria-hidden="true">→</span></a></div>
                 </article>
             </div>
         </section>
@@ -172,16 +190,16 @@
             </article>
             <article class="action-card action-card--green">
                 <span class="action-card__icon" aria-hidden="true">↗</span><h3>Share hope with others.</h3>
-                <p>Help grow awareness of childhood cancer and the importance of seeking care early.</p>
+                <p>Share information about childhood cancer and help families find support.</p>
                 <a class="button button--dark" href="{{ route('cancer.index') }}">Learn about awareness</a>
             </article>
         </section>
 
         <section class="connect-section" id="contact" aria-labelledby="connect-title">
-            <div class="connect-section__photo" role="img" aria-label="A child in a hospital bed with a healthcare worker nearby"></div>
+            <div class="connect-section__photo" role="img" aria-label="Children and caregivers together at CHF"></div>
             <div class="connect-section__content">
                 <p class="eyebrow"><span></span> Stay connected</p>
-                <h2 id="connect-title">Let's make care feel closer.</h2>
+                <h2 id="connect-title">Contact Children’s Hope Foundation</h2>
                 <p>Have a question, want to support a family, or explore working together? Get in touch with our team in Moshi.</p>
                 <div class="contact-card">
                     <a href="mailto:homeofchildrens26@gmail.com"><span class="contact-card__label">Email</span><strong>homeofchildrens26@gmail.com</strong></a>
@@ -212,7 +230,7 @@
             </a>
             <a class="footer-contact-item" href="#contact">
                 <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5.2-8 12-8 12S4 15.2 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-                <span><small>Our office</small><strong>Moshi, Kilimanjaro<br>Near KCMC Hospital</strong></span>
+                <span><small>Our office</small><strong>Moshi, Kilimanjaro<br>Near the hospital</strong></span>
             </a>
         </div>
         <div class="container footer-grid">
@@ -220,8 +238,8 @@
                 <a href="#home" aria-label="Children's Hope Foundation home"><img src="{{ asset('images/chf-logo.png') }}" alt="Children's Hope Foundation" width="500" height="500"></a>
                 <p>Children's Hope Foundation cares for children with cancer and their families in Tanzania.</p>
             </div>
-            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to KCMC</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="{{ route('cancer.index') }}">Childhood cancer information</a><a href="#stories">News &amp; stories</a></div>
-            <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near KCMC Zonal Referral Hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a><a href="tel:+255795469469">+255 795 469 469</a></div>
+            <div class="footer-column footer-column--solutions"><h2>Useful Links</h2><a href="{{ route('about') }}">About CHF</a><a href="{{ route('programs.index') }}">All programs</a><a href="{{ route('programs.show', ['slug' => 'accommodation']) }}">Accommodation and meals</a><a href="{{ route('programs.show', ['slug' => 'transport']) }}">Transport to the nearby hospital</a><a href="{{ route('programs.show', ['slug' => 'additional-programmes']) }}">Play and recreation</a><a href="{{ route('cancer.index') }}">Childhood cancer information</a><a href="#stories">News &amp; stories</a></div>
+            <div class="footer-column footer-column--contact"><h2>Get in touch</h2><p>Moshi, Kilimanjaro, Tanzania<br>Near the hospital</p><a href="mailto:homeofchildrens26@gmail.com">homeofchildrens26@gmail.com</a><a href="tel:+255795469469">+255 795 469 469</a></div>
             <div class="footer-column footer-column--connect"><h2>Stay connected</h2><p>Join us in bringing hope, care and support to children and their families.</p><a class="footer-connect-link" href="#get-involved">Get involved <span aria-hidden="true">↗</span></a><a class="footer-connect-link" href="#donate">Support a child <span aria-hidden="true">↗</span></a></div>
         </div>
         <div class="footer-bottom"><div class="container footer-bottom__inner">

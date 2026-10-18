@@ -8,7 +8,7 @@ return [
         'title' => 'Stories of care',
         'highlight' => 'and hope.',
         'intro' => 'News, updates and letters from Children’s Hope Foundation and the families we support.',
-        'image_path' => 'images/hero3.jpg',
+        'image_path' => 'images/chf-caregiver-art-session.jpeg',
     ],
     'events' => [
         'label' => 'Events',
@@ -17,7 +17,7 @@ return [
         'title' => 'Join us',
         'highlight' => 'for hope.',
         'intro' => 'See upcoming events and community moments supporting children and caregivers in Moshi.',
-        'image_path' => 'images/hero4.jpg',
+        'image_path' => 'images/chf-children-art-activities.jpeg',
     ],
     'vacancies' => [
         'label' => 'Vacancies',
@@ -26,6 +26,6 @@ return [
         'title' => 'Help make',
         'highlight' => 'care possible.',
         'intro' => 'Explore opportunities to contribute your skills to Children’s Hope Foundation.',
-        'image_path' => 'images/second section.jpg',
+        'image_path' => 'images/chf-child-painting.jpeg',
     ],
 ];

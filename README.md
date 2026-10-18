@@ -18,8 +18,26 @@ The project targets Laravel 12 and PHP 8.2. Install framework dependencies and s
 composer install
 Copy-Item .env.example .env
 php artisan key:generate
+php artisan migrate
+php artisan storage:link
 php artisan serve
 ```
+
+Local development uses SQLite by default. Create an empty `database/database.sqlite` file before migrating if Laravel does not offer to create it. Keep local `.env` and database files out of Git. On a new PC, `composer install` uses the committed `composer.lock` so the dependency versions match.
+
+## Updating the live website
+
+After pulling the approved changes from GitHub, run these commands in the application directory:
+
+```sh
+composer install --no-dev --prefer-dist --optimize-autoloader
+php artisan migrate --force
+php artisan optimize:clear
+```
+
+Keep the server's existing `.env` and `APP_KEY`. The content migration refreshes saved legacy banner images and hospital wording while preserving custom uploads. The new service and education programme are provided by configuration.
+
+On the current cPanel layout, the public document root is separate from this checkout. Use cPanel's deployment action (which reads `.cpanel.yml`) or copy the updated `public/css/site.css`, `public/js/`, and `public/images/chf-*` assets into the corresponding `public_html` directories. A Git pull alone does not copy those public assets.
 
 ## First production setup
 

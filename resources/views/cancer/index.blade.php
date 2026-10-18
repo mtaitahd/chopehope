@@ -33,6 +33,11 @@
             </div><div class="program-hero__note"><span aria-hidden="true">♡</span><strong>Care for the whole family</strong><small>Children's Hope Foundation</small></div></div>
             <div class="hero__bottom-accent" aria-hidden="true"><span></span><span></span><span></span></div>
         </section>
+        <section class="cancer-context container" aria-labelledby="cancer-context-title">
+            <div class="section-heading"><p class="eyebrow"><span></span> The national picture</p><h2 id="cancer-context-title">Childhood cancer in Tanzania.</h2></div>
+            @include('partials.cancer-statistics')
+        </section>
+
         <section class="program-overview" id="cancer-topics" aria-labelledby="cancer-topics-title"><div class="container">
             <div class="program-section-heading"><p class="eyebrow"><span></span> Childhood cancer topics</p><h2 id="cancer-topics-title">Information for every step.</h2><p>Choose a topic to learn more. For individual medical questions, please speak with a qualified healthcare professional.</p></div>
             <div class="program-card-grid">
@@ -44,7 +49,7 @@
                 @endforeach
             </div>
         </div></section>
-        <section class="program-cta"><div class="container program-cta__inner"><div><p class="eyebrow eyebrow--light"><span></span> Family support in Moshi</p><h2>Questions about CHF support?</h2><p>Contact us to learn about practical and psychosocial support for families near KCMC.</p></div><a class="button button--yellow" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a></div></section>
+        <section class="program-cta"><div class="container program-cta__inner"><div><p class="eyebrow eyebrow--light"><span></span> Family support in Moshi</p><h2>Questions about CHF support?</h2><p>Contact us to learn about practical and psychosocial support for families near the hospital.</p></div><a class="button button--yellow" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a></div></section>
     </main>
     @include('partials.site-footer')
     <script src="{{ asset('js/site.js') }}" defer></script>
