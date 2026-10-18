@@ -39,7 +39,7 @@
 
     <main id="main-content">
         <section class="program-hero" aria-labelledby="team-title">
-            <img class="program-hero__image" src="{{ asset('images/chf-community-group.jpeg') }}" alt="CHF community gathered outside the support home">
+            <img class="program-hero__image" src="{{ asset('images/abaut.png') }}" alt="The CHF support home in Moshi">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy"><h1 id="team-title">Our <em>Team</em></h1><p class="program-hero__lead">Working together to bring hope, care and support to children with cancer and their families.</p></div></div>
         </section>

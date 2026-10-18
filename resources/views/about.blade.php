@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="about-intro__visual about-intro__visual--about">
-                    <img src="{{ asset('images/chf-community-group.jpeg') }}" alt="CHF community gathered outside the support home" loading="lazy">
+                    <img src="{{ asset('images/abaut.png') }}" alt="The CHF support home in Moshi" loading="lazy">
                 </div>
             </div>
         </section>
