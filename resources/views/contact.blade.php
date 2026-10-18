@@ -29,7 +29,7 @@
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span>{{ $hero['eyebrow'] }}</p>
+
                     <h1 id="contact-hero-title">{{ $hero['title'] }} <em>{{ $hero['highlight'] }}</em></h1>
                     <p class="hero__lead">{{ $hero['intro'] }}</p>
                     <div class="program-hero__actions"><a class="button button--yellow" href="#contact-details">Get in touch <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="#donate">Make a donation</a></div>

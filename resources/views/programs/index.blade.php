@@ -30,7 +30,7 @@
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+
                     <h1 id="program-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <a class="button button--yellow" href="#program-list">Explore our programs <span aria-hidden="true">↓</span></a>

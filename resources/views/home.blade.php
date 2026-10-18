@@ -42,7 +42,7 @@
             <div class="hero__veil" aria-hidden="true"></div>
             <div class="container hero__inner">
                 <div class="hero__copy">
-                    <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+
                     <h1 id="hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                     <div class="hero__actions">

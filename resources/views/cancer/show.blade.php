@@ -26,7 +26,7 @@
             <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="{{ $topic['image_alt'] }}" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
-                <p class="eyebrow eyebrow--light"><span></span> {{ $pageHero['eyebrow'] }}</p>
+
                 <h1 id="cancer-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                 <p class="hero__lead">{{ $pageHero['intro'] }}</p>
                 <div class="program-hero__actions"><a class="button button--yellow" href="#topic-details">Read this topic <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('cancer.index') }}">All topics</a></div>

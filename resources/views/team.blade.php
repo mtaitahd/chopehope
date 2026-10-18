@@ -41,7 +41,7 @@
         <section class="program-hero" aria-labelledby="team-title">
             <img class="program-hero__image" src="{{ asset('images/chf-community-group.jpeg') }}" alt="CHF community gathered outside the support home">
             <div class="program-hero__veil" aria-hidden="true"></div>
-            <div class="container program-hero__inner"><div class="program-hero__copy"><p class="eyebrow eyebrow--light"><span></span> The people behind CHF</p><h1 id="team-title">Our <em>Team</em></h1><p class="program-hero__lead">Working together to bring hope, care and support to children with cancer and their families.</p></div></div>
+            <div class="container program-hero__inner"><div class="program-hero__copy"><h1 id="team-title">Our <em>Team</em></h1><p class="program-hero__lead">Working together to bring hope, care and support to children with cancer and their families.</p></div></div>
         </section>
         <section class="team-section" aria-labelledby="team-members-title"><div class="container">
             <div class="section-heading"><p class="eyebrow"><span></span> People who care</p><h2 id="team-members-title">Meet our team.</h2><p>Get to know the people supporting the work of Children's Hope Foundation.</p></div>
