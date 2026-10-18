@@ -6,7 +6,7 @@ return [
         'eyebrow' => "Children's Hope Foundation · Moshi, Tanzania",
         'title' => 'No child should face cancer', 'highlight' => 'alone.',
         'intro' => 'Supporting children with cancer and their caregivers in Tanzania through accommodation, nutrition, transport, psychosocial care, play and education support.',
-        'image_path' => 'images/chf-children-art-activities.jpeg',
+        'image_path' => 'images/chf-community-group.jpeg',
     ],
     'about' => [
         'label' => 'About CHF', 'group' => 'Main pages',
