@@ -5,9 +5,9 @@ return [
         'label' => 'News & updates',
         'group' => 'News & Stories pages',
         'eyebrow' => 'From CHF',
-        'title' => 'Stories of care',
-        'highlight' => 'and hope.',
-        'intro' => 'News, updates and letters from Children’s Hope Foundation and the families we support.',
+        'title' => 'News and',
+        'highlight' => 'Updates',
+        'intro' => 'Read the latest news about our activities and support for children with cancer and their families.',
         'image_path' => 'images/chf-caregiver-art-session.jpeg',
     ],
     'events' => [
