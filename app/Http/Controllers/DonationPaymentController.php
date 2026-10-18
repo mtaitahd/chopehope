@@ -108,18 +108,38 @@ class DonationPaymentController extends Controller
     {
         $record = Donation::where('public_id', $donation)->firstOrFail();
 
-        if ($record->status === 'pending' && !$record->provider_transaction_id
+        if ($record->status === 'pending'
             && $record->created_at->lte(now()->subSeconds(12))
             && (!$record->provider_checked_at || $record->provider_checked_at->lte(now()->subMinute()))) {
             $record->update(['provider_checked_at' => now()]);
             $transaction = $abliner->findByIdempotencyKey($record->idempotency_key);
-            if (is_array($transaction) && $transaction === []) {
-                $record->update(['status' => 'failed', 'provider_error_code' => 'not_created']);
-            } elseif (is_array($transaction)) {
-                $record->update([
-                    'provider_transaction_id' => $transaction['id'] ?? null,
-                    'provider_reference' => $transaction['reference'] ?? null,
-                ]);
+            // Never downgrade a confirmed transaction if a concurrent webhook arrives.
+            if ($transaction === [] && !$record->provider_transaction_id) {
+                Donation::whereKey($record->id)->where('status', 'pending')
+                    ->whereNull('provider_transaction_id')
+                    ->update(['status' => 'failed', 'provider_error_code' => 'not_created']);
+            } elseif (is_array($transaction) && $transaction !== []) {
+                $identityMatches = filled($transaction['id'] ?? null)
+                    && (!$record->provider_transaction_id || $record->provider_transaction_id === $transaction['id'])
+                    && ($transaction['customer_reference'] ?? null) === $record->customer_reference;
+                $amountMatches = isset($transaction['amount'])
+                    ? is_numeric($transaction['amount']) && (float) $transaction['amount'] === (float) $record->amount
+                    : isset($transaction['amount_cents']) && is_numeric($transaction['amount_cents'])
+                        && (float) $transaction['amount_cents'] === (float) ($record->amount * 100);
+                if ($identityMatches && $amountMatches
+                    && ($transaction['type'] ?? null) === 'deposit'
+                    && ($transaction['method'] ?? null) === 'mobile'
+                    && ($transaction['currency'] ?? null) === 'TZS') {
+                    $changes = [
+                        'provider_transaction_id' => $transaction['id'],
+                        'provider_reference' => $transaction['provider_reference'] ?? $transaction['reference'] ?? $record->provider_reference,
+                    ];
+                    if (in_array($transaction['status'] ?? null, ['completed', 'failed'], true)) {
+                        $changes['status'] = $transaction['status'];
+                        if ($transaction['status'] === 'completed') $changes['completed_at'] = now();
+                    }
+                    Donation::whereKey($record->id)->where('status', 'pending')->update($changes);
+                }
             }
             $record->refresh();
         }

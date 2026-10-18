@@ -14,5 +14,6 @@
             <p>Include your name in the payment reference. <a href="{{ route('contact') }}">Contact CHF for bank details or help.</a></p>
         </section>
         <button class="button button--blue donation-dialog__submit" type="submit" data-donation-submit>Continue to mobile money <span aria-hidden="true">→</span></button>
+        <button class="button button--blue" type="button" data-donation-recheck hidden>Check payment status again</button>
     </form>
 </dialog>

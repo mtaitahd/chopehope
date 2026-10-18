@@ -6,6 +6,7 @@
     const status = dialog.querySelector('[data-donation-status]');
     const submit = dialog.querySelector('[data-donation-submit]');
     const bankDetails = dialog.querySelector('[data-donation-bank]');
+    const recheck = dialog.querySelector('[data-donation-recheck]');
     const defaultButtonText = submit.innerHTML;
     const supportsNativeDialog = typeof dialog.showModal === 'function';
     let activePublicId = null;
@@ -52,18 +53,21 @@
 
     const setBusy = (busy) => {
         submit.disabled = busy;
+        form.querySelectorAll('input:not([type="hidden"])').forEach((input) => { input.readOnly = busy; });
         submit.innerHTML = busy ? 'Sending secure request…' : defaultButtonText;
     };
 
     async function pollDonation(publicId) {
         if (polling) return;
         polling = true;
+        recheck.hidden = true;
         const template = dialog.dataset.statusUrl;
         const url = template.replace('__DONATION_ID__', encodeURIComponent(publicId));
 
         try {
             for (let attempt = 0; attempt < 100; attempt += 1) {
                 const response = await fetch(url, { headers: { Accept: 'application/json' }, cache: 'no-store' });
+                if (!response.ok) throw new Error('Status unavailable');
                 const result = await response.json();
                 if (result.status === 'completed' || result.status === 'failed') {
                     bankDetails.hidden = result.bank_transfer_available !== true;
@@ -75,15 +79,21 @@
                 showStatus(result.message || 'Waiting for your mobile money approval. Please check your phone.', 'pending');
                 await new Promise((resolve) => window.setTimeout(resolve, 4000));
             }
-            showStatus('Your payment is still being confirmed. You may close this window; if the payment completed, it will be recorded automatically.', 'pending');
+            showStatus('The payment provider has not confirmed the outcome yet. Please contact CHF if no prompt arrived. Check the status again before starting another payment.', 'pending');
             submit.textContent = 'Still checking payment…';
+            recheck.hidden = false;
         } catch (_) {
             showStatus('We could not refresh the payment status. If you approved the request, please allow a moment for confirmation.', 'pending');
             if (!activePublicId) setBusy(false);
+            else recheck.hidden = false;
         } finally {
             polling = false;
         }
     }
+
+    recheck.addEventListener('click', () => {
+        if (activePublicId) pollDonation(activePublicId);
+    });
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
