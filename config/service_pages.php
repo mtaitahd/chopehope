@@ -74,8 +74,8 @@ return [
         'title' => 'Time to play,',
         'highlight' => 'create and connect.',
         'lead' => 'Art, storytelling and recreation give children opportunities to express themselves and enjoy time together during treatment.',
-        'image' => 'images/chf-hero-service-play-recreation.jpeg',
-        'image_alt' => 'Children drawing during a CHF activity',
+        'image' => 'images/chf-service-play-recreation-swing-care.jpg',
+        'image_alt' => 'Children enjoying outdoor swings with CHF caregivers',
         'intro_title' => 'Making space for childhood.',
         'intro' => 'CHF provides dedicated play areas and structured activities that support children’s emotional wellbeing. Children can paint, listen to stories and take part in recreation in a welcoming environment.',
         'points' => [
