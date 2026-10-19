@@ -25,7 +25,7 @@
 
     <main id="main-content" class="contact-page">
         <section class="program-hero contact-hero" aria-labelledby="contact-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($hero['image_path']) }}" alt="" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($hero['image_path']) }}" alt="CHF staff member speaking with a caller at the office" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">

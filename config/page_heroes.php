@@ -31,6 +31,6 @@ return [
         'label' => 'Contact CHF', 'group' => 'Main pages',
         'eyebrow' => "Children's Hope Foundation · Moshi, Tanzania", 'title' => "Let's talk.", 'highlight' => "We're here to help.",
         'intro' => 'Reach our team for information about family support, partnerships, donations or visiting CHF near the hospital in Moshi.',
-        'image_path' => 'images/abaut.png',
+        'image_path' => 'images/chf-contact-phone.jpg',
     ],
 ];
