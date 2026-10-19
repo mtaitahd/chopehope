@@ -8,8 +8,8 @@ return [
         'title' => 'A place to rest,',
         'highlight' => 'close to care.',
         'lead' => 'Free accommodation and nourishing meals for children with cancer and their caregivers travelling to Moshi.',
-        'image' => 'images/chf-support-home.jpeg',
-        'image_alt' => 'The CHF support home and garden in Moshi',
+        'image' => 'images/chf-accommodation-bunks.jpg',
+        'image_alt' => 'Bunk beds in the CHF Home Away from Home',
         'intro_title' => 'Room for families to feel at home.',
         'intro' => 'CHF’s Home Away from Home is near the hospital. It gives children and caregivers from outside Moshi a place to stay while treatment is underway.',
         'points' => [
@@ -30,8 +30,8 @@ return [
         'title' => 'A smoother journey',
         'highlight' => 'to treatment.',
         'lead' => 'CHF helps families staying at its support home travel to the nearby hospital for treatment and appointments.',
-        'image' => 'images/chf-family-activities.jpeg',
-        'image_alt' => 'Children and caregivers taking part in activities in the CHF garden',
+        'image' => 'images/chf-transport-vehicle.jpg',
+        'image_alt' => 'A CHF caregiver and children travelling in a support vehicle',
         'intro_title' => 'Helping families reach their appointments.',
         'intro' => 'Treatment can involve regular hospital visits. Transport support helps children and caregivers connect the CHF home with care at the nearby hospital in Moshi.',
         'points' => [
@@ -52,8 +52,8 @@ return [
         'title' => 'A listening ear,',
         'highlight' => 'a little more hope.',
         'lead' => 'Emotional and social support helps children, parents and caregivers feel heard and less alone during treatment.',
-        'image' => 'images/chf-creative-play.jpeg',
-        'image_alt' => 'Children painting together at CHF',
+        'image' => 'images/chf-hero-service-psychosocial-support.jpeg',
+        'image_alt' => 'Caregivers sharing a conversation at CHF',
         'intro_title' => 'Families deserve care, too.',
         'intro' => 'A childhood cancer diagnosis affects the whole family. CHF offers psychosocial support and activities that make room for connection, reassurance and everyday moments of childhood.',
         'points' => [
@@ -74,8 +74,8 @@ return [
         'title' => 'Time to play,',
         'highlight' => 'create and connect.',
         'lead' => 'Art, storytelling and recreation give children opportunities to express themselves and enjoy time together during treatment.',
-        'image' => 'images/chf-children-art-activities.jpeg',
-        'image_alt' => 'Children and caregivers painting outdoors at CHF',
+        'image' => 'images/chf-hero-service-play-recreation.jpeg',
+        'image_alt' => 'Children drawing during a CHF activity',
         'intro_title' => 'Making space for childhood.',
         'intro' => 'CHF provides dedicated play areas and structured activities that support children’s emotional wellbeing. Children can paint, listen to stories and take part in recreation in a welcoming environment.',
         'points' => [

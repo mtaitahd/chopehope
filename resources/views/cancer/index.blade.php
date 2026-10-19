@@ -23,7 +23,7 @@
     @php($pageHero = \App\Support\PageHeroContent::get('cancer'))
     <main id="main-content" class="program-page cancer-topic-page">
         <section class="program-hero cancer-topic-hero" aria-labelledby="cancer-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A healthcare worker supporting a child" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Childhood cancer information displayed at CHF" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
 

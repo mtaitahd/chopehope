@@ -8,8 +8,8 @@ return [
         'title' => 'Your kindness',
         'highlight' => 'helps families keep going.',
         'lead' => 'Your contribution helps CHF provide practical and emotional support to children with cancer and their caregivers in Moshi.',
-        'image' => 'images/chf-family-activities.jpeg',
-        'image_alt' => 'Children and caregivers taking part in activities in the CHF garden',
+        'image' => 'images/chf-hero-involvement-donate.jpeg',
+        'image_alt' => 'Food being prepared at the CHF support home',
         'intro_title' => 'Give in a way that works for you.',
         'intro' => 'Every contribution helps sustain care for families during treatment. CHF welcomes financial donations and useful in-kind items. Contact the team if you would like to confirm current needs.',
         'points' => [
@@ -32,8 +32,8 @@ return [
         'title' => 'Bring your time,',
         'highlight' => 'care and skills.',
         'lead' => 'People who give their time can help create a more welcoming and supportive experience for children and caregivers.',
-        'image' => 'images/chf-caregiver-art-session.jpeg',
-        'image_alt' => 'A caregiver helping a child paint at CHF',
+        'image' => 'images/chf-hero-involvement-volunteer.jpeg',
+        'image_alt' => 'A welcoming room at the CHF support home',
         'intro_title' => 'Small acts of care can mean a lot.',
         'intro' => 'Volunteers can support CHF through appropriate activities, practical help and community awareness. Contact the foundation to discuss your skills, availability and current needs.',
         'points' => [
@@ -54,8 +54,8 @@ return [
         'title' => 'Stronger care',
         'highlight' => 'through partnership.',
         'lead' => 'Businesses, community groups and organisations can work with CHF to support children with cancer and their caregivers.',
-        'image' => 'images/chf-children-art-activities.jpeg',
-        'image_alt' => 'Children and caregivers painting outdoors at CHF',
+        'image' => 'images/chf-hero-involvement-partnership.jpeg',
+        'image_alt' => 'Meals being prepared for families at CHF',
         'intro_title' => 'Let’s build support together.',
         'intro' => 'Partnerships can bring resources, expertise and community connections closer to families. Tell us what your organisation hopes to contribute and we can explore a suitable next step.',
         'points' => [

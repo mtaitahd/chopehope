@@ -8,7 +8,7 @@ return [
         'title' => 'News and',
         'highlight' => 'Updates',
         'intro' => 'Read the latest news about our activities and support for children with cancer and their families.',
-        'image_path' => 'images/chf-caregiver-art-session.jpeg',
+        'image_path' => 'images/chf-hero-news-family-support.jpeg',
     ],
     'events' => [
         'label' => 'Events',
@@ -17,7 +17,7 @@ return [
         'title' => 'Join us',
         'highlight' => 'for hope.',
         'intro' => 'See upcoming events and community moments supporting children and caregivers in Moshi.',
-        'image_path' => 'images/chf-children-art-activities.jpeg',
+        'image_path' => 'images/chf-hero-events-outdoor-play.jpeg',
     ],
     'vacancies' => [
         'label' => 'Vacancies',
@@ -26,6 +26,6 @@ return [
         'title' => 'Help make',
         'highlight' => 'care possible.',
         'intro' => 'Explore opportunities to contribute your skills to Children’s Hope Foundation.',
-        'image_path' => 'images/chf-child-painting.jpeg',
+        'image_path' => 'images/chf-hero-vacancies-team.jpeg',
     ],
 ];
