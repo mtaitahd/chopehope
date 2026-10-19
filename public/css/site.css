@@ -616,6 +616,11 @@ button { font: inherit; }
 .info-card--3 .info-card__number { color: var(--green-dark); }
 .info-card h3 { margin: 0 0 10px; color: var(--blue-dark); font-family: var(--font-display); font-size: 21px; font-weight: 900; line-height: 1.22; }
 .info-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.info-card-grid--photo-captions { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 980px; margin-inline: auto; }
+.info-card--with-image { min-height: 0; padding: 0; overflow: hidden; }
+.info-card__image { display: block; width: 100%; aspect-ratio: 2.1 / 1; object-fit: cover; }
+.info-card__caption { padding: 0; }
+.info-card--with-image .info-card__caption { padding: 24px 27px 28px; }
 .info-donation-account { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 32px; margin-top: 28px; padding: clamp(24px, 4vw, 38px); border-left: 5px solid var(--yellow); background: #fff; box-shadow: 0 14px 34px rgba(10,54,79,.08); }
 .info-donation-account .eyebrow { margin-bottom: 10px; }
 .info-donation-account h3 { margin: 0; color: var(--blue-dark); font-family: var(--font-display); font-size: 25px; font-weight: 900; }
@@ -722,6 +727,7 @@ button { font: inherit; }
     .nav-link::after { right: 8px; left: 8px; }
     .program-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .info-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .info-card-grid--photo-captions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .info-card--3 { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
@@ -757,6 +763,8 @@ button { font: inherit; }
     .info-details__heading > p:last-child { font-size: 15px; line-height: 1.7; }
     .info-card-grid { grid-template-columns: 1fr; gap: 13px; }
     .info-card, .info-card--3 { grid-column: auto; min-height: 0; padding: 22px; }
+    .info-card--with-image { padding: 0; }
+    .info-card--with-image .info-card__caption { padding: 21px 22px 24px; }
     .info-donation-account { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
     .info-feature { padding-block: 48px 62px; }
     .info-feature__inner { grid-template-columns: 1fr; gap: 31px; }

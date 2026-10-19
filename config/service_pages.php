@@ -13,15 +13,9 @@ return [
         'intro_title' => 'Room for families to feel at home.',
         'intro' => 'CHF’s Home Away from Home is near the hospital. It gives children and caregivers from outside Moshi a place to stay while treatment is underway.',
         'points' => [
-            ['title' => 'Free accommodation', 'text' => 'Children and caregivers from distant communities can stay at the CHF home without accommodation charges while attending hospital appointments.'],
-            ['title' => 'Meals during the stay', 'text' => 'Nourishing meals help caregivers focus on their child during a demanding time.'],
-            ['title' => 'A caring place to pause', 'text' => 'A safe, welcoming environment offers room to rest between hospital visits.'],
+            ['title' => 'Free accommodation', 'text' => 'Children and caregivers from distant communities can stay at the CHF home without accommodation charges while attending hospital appointments.', 'image' => 'images/chf-accommodation-room-card.jpg', 'image_alt' => 'Bunk beds prepared for families staying at the CHF home'],
+            ['title' => 'Meals during the stay', 'text' => 'Nourishing meals help caregivers focus on their child during a demanding time.', 'image' => 'images/chf-meal-preparation-card.jpg', 'image_alt' => 'CHF caregivers preparing vegetables for a family meal'],
         ],
-        'feature_title' => 'Care that welcomes the whole family.',
-        'feature_text' => 'A childhood cancer journey affects caregivers too. CHF brings accommodation and practical care together close to treatment.',
-        'feature_image' => 'images/chf-child-painting.jpeg',
-        'feature_alt' => 'A child painting during a CHF activity',
-        'cta' => 'Ask about accommodation',
     ],
     'transport-to-treatment' => [
         'name' => 'Transport to treatment',

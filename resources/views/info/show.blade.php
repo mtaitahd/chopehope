@@ -42,9 +42,14 @@
         <section class="info-details" id="page-details" aria-labelledby="info-details-title">
             <div class="container">
                 <header class="info-details__heading"><p class="eyebrow"><span></span>{{ $page['name'] }}</p><h2 id="info-details-title">{{ $page['intro_title'] }}</h2><p>{{ $page['intro'] }}</p></header>
-                <div class="info-card-grid">
+                <div class="info-card-grid{{ request()->route('slug') === 'accommodation-and-meals' ? ' info-card-grid--photo-captions' : '' }}">
                     @foreach($page['points'] as $index => $point)
-                        <article class="info-card info-card--{{ $index + 1 }}"><span class="info-card__number">0{{ $index + 1 }}</span><h3>{{ $point['title'] }}</h3><p>{{ $point['text'] }}</p></article>
+                        <article class="info-card info-card--{{ $index + 1 }}{{ !empty($point['image']) ? ' info-card--with-image' : '' }}">
+                            @if(!empty($point['image']))
+                                <img class="info-card__image" src="{{ asset($point['image']) }}" alt="{{ $point['image_alt'] }}" loading="lazy">
+                            @endif
+                            <div class="info-card__caption"><span class="info-card__number">0{{ $index + 1 }}</span><h3>{{ $point['title'] }}</h3><p>{{ $point['text'] }}</p></div>
+                        </article>
                     @endforeach
                 </div>
                 @if(isset($page['account']))
@@ -61,12 +66,14 @@
             </div>
         </section>
 
+        @unless($pageType === 'service' && request()->route('slug') === 'accommodation-and-meals')
         <section class="info-feature info-feature--{{ $page['theme'] }}">
             <div class="container info-feature__inner">
                 <div class="info-feature__visual"><img src="{{ asset($page['feature_image']) }}" alt="{{ $page['feature_alt'] }}" loading="lazy"><span class="info-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
                 <div class="info-feature__copy"><p class="eyebrow"><span></span>{{ $pageType === 'service' ? 'Support around treatment' : 'Stand with families' }}</p><h2>{{ $page['feature_title'] }}</h2><p>{{ $page['feature_text'] }}</p><a class="button button--blue" href="{{ route('contact') }}">{{ $page['cta'] }} <span aria-hidden="true">→</span></a></div>
             </div>
         </section>
+        @endunless
 
         <section class="info-related" aria-labelledby="info-related-title">
             <div class="container">
