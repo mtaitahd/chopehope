@@ -49,8 +49,8 @@ return [
         'title' => 'A listening ear,',
         'highlight' => 'a little more hope.',
         'lead' => 'Psychosocial care supports children, parents and caregivers through the emotional pressures of treatment.',
-        'image' => 'images/chf-program-emotional-support-balanced.jpg',
-        'image_alt' => 'Children drawing with caregivers during a CHF activity',
+        'image' => 'images/chf-program-emotional-support-circle.jpg',
+        'image_alt' => 'Children and caregivers sharing a group support session at CHF',
         'intro_title' => 'Families deserve support, too.',
         'intro' => 'A childhood cancer diagnosis affects the whole family. CHF offers psychosocial support that recognizes children and caregivers need space, connection and encouragement alongside practical care.',
         'points' => [
