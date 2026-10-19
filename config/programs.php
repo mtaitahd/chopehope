@@ -91,7 +91,7 @@ return [
         'title' => 'Knowledge can',
         'highlight' => 'open the way to care.',
         'lead' => 'CHF promotes understanding of childhood cancer, early detection and the importance of seeking medical care early.',
-        'image' => 'images/chf-program-awareness-education-balanced.jpg',
+        'image' => 'images/chf-program-awareness-education-board.jpg',
         'image_alt' => 'Health education posters displayed at CHF',
         'intro_title' => 'Awareness helps communities act sooner.',
         'intro' => 'Understanding childhood cancer signs and the value of timely care can help families seek support. CHF’s awareness work aims to reduce stigma and encourage early medical attention.',
