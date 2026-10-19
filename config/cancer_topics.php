@@ -67,7 +67,7 @@ return [
         'title' => 'Notice changes',
         'highlight' => 'and seek advice early.',
         'lead' => 'Persistent or unusual symptoms deserve attention from a healthcare professional. Many symptoms also have causes other than cancer.',
-        'image' => 'images/chf-hero-cancer-early-signs.jpeg',
+        'image' => 'images/chf-cancer-early-warning-signs-board.jpg',
         'image_alt' => 'Children and caregivers taking part in a garden activity',
         'intro_title' => 'A symptom is a reason to ask, not a diagnosis.',
         'intro' => 'Possible warning signs can include a persistent fever, severe or ongoing headache, bone pain, unexplained weight loss, unusual bruising or bleeding, or a new swelling. These signs can have many causes. A health professional can assess the child and decide whether further checks are needed.',
