@@ -13,13 +13,13 @@ return [
         'eyebrow' => "Children's Hope Foundation · Moshi, Tanzania",
         'title' => 'A place of hope,', 'highlight' => 'close to care.',
         'intro' => 'Learn how Children’s Hope Foundation supports children with cancer and their caregivers throughout treatment in Moshi.',
-        'image_path' => 'images/chf-children-art-activities.jpeg',
+        'image_path' => 'images/abaut.png',
     ],
     'programs' => [
         'label' => 'Programs overview', 'group' => 'Main pages',
         'eyebrow' => 'Our programs', 'title' => 'Support shaped around', 'highlight' => 'each family.',
         'intro' => 'Explore the practical, emotional and community support Children’s Hope Foundation provides for children with cancer and their caregivers.',
-        'image_path' => 'images/chf-creative-play.jpeg',
+        'image_path' => 'images/chf-program-overview-garden.jpg',
     ],
     'cancer' => [
         'label' => 'Childhood cancer overview', 'group' => 'Main pages',

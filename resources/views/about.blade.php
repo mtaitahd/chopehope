@@ -39,7 +39,7 @@
 
     <main id="main-content">
         <section class="hero" id="about-hero" aria-labelledby="hero-title">
-            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Children and caregivers taking part in an outdoor art activity at CHF" fetchpriority="high">
+            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Children's Hope Foundation support home in Moshi" fetchpriority="high">
             <div class="hero__veil" aria-hidden="true"></div>
             <div class="container hero__inner">
                 <div class="hero__copy">

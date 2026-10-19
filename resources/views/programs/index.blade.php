@@ -26,7 +26,7 @@
 
     <main id="main-content" class="program-page">
         <section class="program-hero program-hero--index" aria-labelledby="program-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Children painting together at CHF" fetchpriority="high">
+            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="A child and CHF caregivers tending plants in the garden" fetchpriority="high">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
