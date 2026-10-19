@@ -130,7 +130,7 @@ return [
     'additional-programmes' => [
         'name' => 'Additional Programmes',
         'eyebrow' => 'Play, creativity and connection',
-        'title' => 'Space to be a child,',
+        'title' => 'Play brings joy,',
         'highlight' => 'even during treatment.',
         'lead' => 'Play and recreation create room for children to connect, express themselves and enjoy age-appropriate activities.',
         'image' => 'images/chf-program-additional-programmes-balanced.jpg',
