@@ -22,8 +22,7 @@
     @include('partials.main-nav')
     @php($pageHero = \App\Support\PageHeroContent::get('cancer'))
     <main id="main-content" class="program-page cancer-topic-page">
-        <section class="program-hero cancer-topic-hero" aria-labelledby="cancer-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Childhood cancer information displayed at CHF" fetchpriority="high">
+        <section class="program-hero cancer-topic-hero program-hero--text-only" aria-labelledby="cancer-hero-title">
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
 
@@ -42,8 +41,10 @@
             <div class="program-section-heading"><p class="eyebrow"><span></span> Childhood cancer topics</p><h2 id="cancer-topics-title">Information for every step.</h2><p>Choose a topic to learn more. For individual medical questions, please speak with a qualified healthcare professional.</p></div>
             <div class="program-card-grid">
                 @foreach($topics as $slug => $topic)
-                    <a class="program-card" href="{{ route('cancer.show', ['slug' => $slug]) }}">
-                        <div class="program-card__image-wrap"><img src="{{ asset($topic['image']) }}" alt="{{ $topic['image_alt'] }}" loading="lazy"><span class="program-card__number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span></div>
+                    <a class="program-card{{ in_array($slug, ['early-warning-signs', 'teenage-corner'], true) ? '' : ' program-card--text-only' }}" href="{{ route('cancer.show', ['slug' => $slug]) }}">
+                        @if(in_array($slug, ['early-warning-signs', 'teenage-corner'], true))
+                            <div class="program-card__image-wrap"><img src="{{ asset($topic['image']) }}" alt="{{ $topic['image_alt'] }}" loading="lazy"><span class="program-card__number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span></div>
+                        @endif
                         <div class="program-card__body"><p class="eyebrow"><span></span> {{ $topic['eyebrow'] }}</p><h3>{{ $topic['name'] }}</h3><p>{{ $topic['lead'] }}</p><span class="program-card__link">Read this topic <b aria-hidden="true">→</b></span></div>
                     </a>
                 @endforeach

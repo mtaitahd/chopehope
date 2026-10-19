@@ -24,8 +24,10 @@
     @include('partials.main-nav')
 
     <main id="main-content" class="info-page info-page--{{ $pageType }} info-page--{{ $page['theme'] }}">
-        <section class="program-hero info-hero info-hero--{{ $page['theme'] }}" aria-labelledby="info-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($hero['image_path']) }}" alt="{{ $page['image_alt'] }}" fetchpriority="high">
+        <section class="program-hero info-hero info-hero--{{ $page['theme'] }}{{ $pageType === 'involvement' ? ' program-hero--text-only' : '' }}" aria-labelledby="info-hero-title">
+            @if($pageType !== 'involvement')
+                <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($hero['image_path']) }}" alt="{{ $page['image_alt'] }}" fetchpriority="high">
+            @endif
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner">
                 <div class="program-hero__copy">
@@ -68,8 +70,10 @@
 
         @unless($pageType === 'service' && request()->route('slug') === 'accommodation-and-meals')
         <section class="info-feature info-feature--{{ $page['theme'] }}">
-            <div class="container info-feature__inner">
-                <div class="info-feature__visual"><img src="{{ asset($page['feature_image']) }}" alt="{{ $page['feature_alt'] }}" loading="lazy"><span class="info-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
+            <div class="container info-feature__inner{{ $pageType === 'involvement' ? ' info-feature__inner--text-only' : '' }}">
+                @if($pageType !== 'involvement')
+                    <div class="info-feature__visual"><img src="{{ asset($page['feature_image']) }}" alt="{{ $page['feature_alt'] }}" loading="lazy"><span class="info-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
+                @endif
                 <div class="info-feature__copy"><p class="eyebrow"><span></span>{{ $pageType === 'service' ? 'Support around treatment' : 'Stand with families' }}</p><h2>{{ $page['feature_title'] }}</h2><p>{{ $page['feature_text'] }}</p><a class="button button--blue" href="{{ route('contact') }}">{{ $page['cta'] }} <span aria-hidden="true">→</span></a></div>
             </div>
         </section>

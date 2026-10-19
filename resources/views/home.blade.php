@@ -75,7 +75,7 @@
             </a>
         </section>
 
-        <section class="cancer-section" id="cancer-info" aria-labelledby="cancer-title">
+        <section class="cancer-section cancer-section--text-only" id="cancer-info" aria-labelledby="cancer-title">
             <div class="container cancer-section__inner">
                 <div class="cancer-section__copy">
                     <p class="eyebrow eyebrow--light"><span></span> Awareness matters</p>
@@ -83,9 +83,6 @@
                     <p>CHF supports increased awareness of childhood cancer, early detection and timely medical care. Families should be able to seek help without distance or poverty standing in the way.</p>
                     @include('partials.cancer-statistics')
                     <a class="button button--outline-light" href="{{ route('cancer.index') }}">Learn about childhood cancer</a>
-                </div>
-                <div class="cancer-section__image">
-                    <img src="{{ asset('images/chf-child-painting.jpeg') }}" alt="A child painting during an art activity at CHF" loading="lazy">
                 </div>
             </div>
         </section>

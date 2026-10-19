@@ -22,8 +22,10 @@
     @include('partials.main-nav')
     @php($pageHero = \App\Support\PageHeroContent::get('cancer-'.$slug))
     <main id="main-content" class="program-page cancer-topic-page">
-        <section class="program-hero cancer-topic-hero" aria-labelledby="cancer-hero-title">
-            <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="{{ $topic['image_alt'] }}" fetchpriority="high">
+        <section class="program-hero cancer-topic-hero{{ in_array($slug, ['early-warning-signs', 'teenage-corner'], true) ? '' : ' program-hero--text-only' }}" aria-labelledby="cancer-hero-title">
+            @if(in_array($slug, ['early-warning-signs', 'teenage-corner'], true))
+                <img class="program-hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="{{ $topic['image_alt'] }}" fetchpriority="high">
+            @endif
             <div class="program-hero__veil" aria-hidden="true"></div>
             <div class="container program-hero__inner"><div class="program-hero__copy">
 
@@ -43,8 +45,10 @@
             <aside class="cancer-info-note"><span aria-hidden="true">i</span><p>This page offers general information and is not a medical diagnosis. For a child’s health, seek advice from a qualified healthcare professional.</p></aside>
         </div></section>
         @if($slug !== 'early-warning-signs')
-            <section class="program-feature cancer-topic-feature"><div class="container program-feature__inner">
-                <div class="program-feature__visual"><img src="{{ asset($topic['image2']) }}" alt="{{ $topic['image2_alt'] }}" loading="lazy"><span class="program-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
+            <section class="program-feature cancer-topic-feature"><div class="container program-feature__inner{{ $slug === 'teenage-corner' ? '' : ' program-feature__inner--text-only' }}">
+                @if($slug === 'teenage-corner')
+                    <div class="program-feature__visual"><img src="{{ asset($topic['image2']) }}" alt="{{ $topic['image2_alt'] }}" loading="lazy"><span class="program-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
+                @endif
                 <div class="program-feature__copy"><p class="eyebrow"><span></span> Here for families</p><h2>{{ $topic['feature_title'] }}</h2><p>{{ $topic['feature_text'] }}</p><a class="button button--blue" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a></div>
             </div></section>
         @endif
