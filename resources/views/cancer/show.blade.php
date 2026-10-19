@@ -42,10 +42,12 @@
             </div>
             <aside class="cancer-info-note"><span aria-hidden="true">i</span><p>This page offers general information and is not a medical diagnosis. For a child’s health, seek advice from a qualified healthcare professional.</p></aside>
         </div></section>
-        <section class="program-feature cancer-topic-feature"><div class="container program-feature__inner">
-            <div class="program-feature__visual"><img src="{{ asset($topic['image2']) }}" alt="{{ $topic['image2_alt'] }}" loading="lazy"><span class="program-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
-            <div class="program-feature__copy"><p class="eyebrow"><span></span> Here for families</p><h2>{{ $topic['feature_title'] }}</h2><p>{{ $topic['feature_text'] }}</p><a class="button button--blue" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a></div>
-        </div></section>
+        @if($slug !== 'early-warning-signs')
+            <section class="program-feature cancer-topic-feature"><div class="container program-feature__inner">
+                <div class="program-feature__visual"><img src="{{ asset($topic['image2']) }}" alt="{{ $topic['image2_alt'] }}" loading="lazy"><span class="program-feature__badge"><b>CHF</b><small>Hope, love and support</small></span></div>
+                <div class="program-feature__copy"><p class="eyebrow"><span></span> Here for families</p><h2>{{ $topic['feature_title'] }}</h2><p>{{ $topic['feature_text'] }}</p><a class="button button--blue" href="{{ route('home') }}#contact">Contact CHF <span aria-hidden="true">→</span></a></div>
+            </div></section>
+        @endif
         <section class="related-programs cancer-related" aria-labelledby="related-cancer-title"><div class="container">
             <div class="related-programs__heading"><div><p class="eyebrow"><span></span> Continue exploring</p><h2 id="related-cancer-title">More childhood cancer topics.</h2></div><a href="{{ route('cancer.index') }}">All topics <span aria-hidden="true">→</span></a></div>
             <div class="related-programs__grid">
