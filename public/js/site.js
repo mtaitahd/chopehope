@@ -4,7 +4,7 @@ const menu = document.querySelector('#main-menu');
 const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
 const homeHero = document.querySelector('[data-home-hero]');
-if (homeHero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (homeHero) {
     const images = [...homeHero.querySelectorAll('[data-home-hero-image]')];
     const slides = JSON.parse(homeHero.dataset.homeHeroSlides || '[]');
     let currentIndex = 0;
@@ -12,26 +12,29 @@ if (homeHero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) 
     let inactiveImage = images[1];
 
     if (slides.length > 1 && activeImage && inactiveImage) {
-        const showNextSlide = async () => {
+        const showNextSlide = () => {
             const nextIndex = (currentIndex + 1) % slides.length;
             const nextSlide = slides[nextIndex];
-            inactiveImage.src = nextSlide.src;
+            const preload = new Image();
 
-            try {
-                await inactiveImage.decode();
-            } catch {
+            preload.onload = () => {
+                inactiveImage.src = preload.src;
+                inactiveImage.alt = nextSlide.alt;
+                inactiveImage.removeAttribute('aria-hidden');
+                activeImage.setAttribute('aria-hidden', 'true');
+                inactiveImage.classList.add('is-active');
+                activeImage.classList.remove('is-active');
+                [activeImage, inactiveImage] = [inactiveImage, activeImage];
+                currentIndex = nextIndex;
                 window.setTimeout(showNextSlide, 2000);
-                return;
-            }
+            };
 
-            inactiveImage.alt = nextSlide.alt;
-            inactiveImage.removeAttribute('aria-hidden');
-            activeImage.setAttribute('aria-hidden', 'true');
-            inactiveImage.classList.add('is-active');
-            activeImage.classList.remove('is-active');
-            [activeImage, inactiveImage] = [inactiveImage, activeImage];
-            currentIndex = nextIndex;
-            window.setTimeout(showNextSlide, 2000);
+            preload.onerror = () => {
+                currentIndex = nextIndex;
+                window.setTimeout(showNextSlide, 2000);
+            };
+
+            preload.src = nextSlide.src;
         };
 
         window.setTimeout(showNextSlide, 2000);
