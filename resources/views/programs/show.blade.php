@@ -33,7 +33,7 @@
 
                     <h1 id="program-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
-                    <div class="program-hero__actions"><a class="button button--yellow" href="#program-details">Discover this program <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('programs.index') }}">All programs</a></div>
+                    <div class="program-hero__actions"><a class="button button--yellow" href="#program-details">Discover this programme <span aria-hidden="true">↓</span></a><a class="button button--outline-light" href="{{ route('programs.index') }}">All programmes</a></div>
                 </div>
 
             </div>
@@ -59,7 +59,7 @@
         </section>
 
         <section class="related-programs" aria-labelledby="related-programs-title">
-            <div class="container"><div class="related-programs__heading"><div><p class="eyebrow"><span></span> More from CHF</p><h2 id="related-programs-title">Support works together.</h2></div><a href="{{ route('programs.index') }}">View all programs <span aria-hidden="true">→</span></a></div>
+            <div class="container"><div class="related-programs__heading"><div><p class="eyebrow"><span></span> More from CHF</p><h2 id="related-programs-title">Support works together.</h2></div><a href="{{ route('programs.index') }}">View all programmes <span aria-hidden="true">→</span></a></div>
                 <div class="related-programs__grid">
                     @foreach($programs as $relatedSlug => $related)
                         @if($relatedSlug !== $slug)

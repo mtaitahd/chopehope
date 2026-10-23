@@ -33,7 +33,7 @@
 
                     <h1 id="program-hero-title">{{ $pageHero['title'] }} <em>{{ $pageHero['highlight'] }}</em></h1>
                     <p class="hero__lead">{{ $pageHero['intro'] }}</p>
-                    <a class="button button--yellow" href="#program-list">Explore our programs <span aria-hidden="true">↓</span></a>
+                    <a class="button button--yellow" href="#program-list">Explore our programmes <span aria-hidden="true">↓</span></a>
                 </div>
 
             </div>
@@ -43,15 +43,15 @@
         <section class="program-overview" id="program-list" aria-labelledby="program-list-title">
             <div class="container">
                 <div class="program-section-heading">
-                    <p class="eyebrow"><span></span> Our programs</p>
+                    <p class="eyebrow"><span></span> Our programmes</p>
                     <h2 id="program-list-title">Practical support, made personal.</h2>
-                    <p>Each program responds to a different part of the journey. Choose one to learn how CHF stands alongside children and caregivers.</p>
+                    <p>Each programme responds to a different part of the journey. Choose one to learn how CHF stands alongside children and caregivers.</p>
                 </div>
                 <div class="program-card-grid">
                     @foreach($programs as $slug => $program)
                         <a class="program-card" href="{{ route('programs.show', ['slug' => $slug]) }}">
                             <div class="program-card__image-wrap"><img src="{{ asset($program['image']) }}" alt="{{ $program['image_alt'] }}" loading="lazy"><span class="program-card__number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span></div>
-                            <div class="program-card__body"><p class="eyebrow"><span></span> {{ $program['eyebrow'] }}</p><h3>{{ $program['name'] }}</h3><p>{{ $program['lead'] }}</p><span class="program-card__link">Discover this program <b aria-hidden="true">→</b></span></div>
+                            <div class="program-card__body"><p class="eyebrow"><span></span> {{ $program['eyebrow'] }}</p><h3>{{ $program['name'] }}</h3><p>{{ $program['lead'] }}</p><span class="program-card__link">Discover this programme <b aria-hidden="true">→</b></span></div>
                         </a>
                     @endforeach
                 </div>

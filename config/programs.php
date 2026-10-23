@@ -52,7 +52,7 @@ return [
         'image' => 'images/chf-program-emotional-support-circle.jpg',
         'image_alt' => 'Children and caregivers sharing a group support session at CHF',
         'intro_title' => 'Families deserve support, too.',
-        'intro' => 'A childhood cancer diagnosis affects the whole family. CHF offers psychosocial support that recognizes children and caregivers need space, connection and encouragement alongside practical care.',
+        'intro' => 'A childhood cancer diagnosis affects the whole family. CHF offers psychosocial support that recognises children and caregivers need space, connection and encouragement alongside practical care.',
         'points' => [
             ['title' => 'A space to talk', 'text' => 'Supportive conversations can help families feel heard during a difficult time.'],
             ['title' => 'Caregiver connection', 'text' => 'Peer support helps caregivers share experiences and encouragement.'],
@@ -73,7 +73,7 @@ return [
         'image' => 'images/chf-program-practical-support-balanced.jpg',
         'image_alt' => 'Laundry being washed at the CHF support home',
         'intro_title' => 'Small essentials can make a hard day easier.',
-        'intro' => 'When families travel for specialized care, everyday needs can add stress. CHF brings practical support closer to treatment so caregivers can focus on their child and family.',
+        'intro' => 'When families travel for specialised care, everyday needs can add stress. CHF brings practical support closer to treatment so caregivers can focus on their child and family.',
         'points' => [
             ['title' => 'A nearby support home', 'text' => 'A place to stay close to the hospital while a child receives treatment.'],
             ['title' => 'Meals and daily needs', 'text' => 'Support with nourishing meals and practical family needs during the stay.'],
@@ -100,7 +100,7 @@ return [
             ['title' => 'Encourage early attention', 'text' => 'Help families feel supported in seeking medical advice when concerned.'],
             ['title' => 'Reduce stigma', 'text' => 'Promote compassionate conversations about childhood cancer in the community.'],
         ],
-        'feature_title' => 'A community that understands can support.',
+        'feature_title' => 'A community that understands can offer support.',
         'feature_text' => 'Awareness is part of CHF’s wider commitment to children and families throughout treatment.',
         'image2' => 'images/chf-family-activities.jpeg',
         'image2_alt' => 'Children and caregivers taking part in activities in the CHF garden',

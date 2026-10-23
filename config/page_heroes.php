@@ -16,8 +16,8 @@ return [
         'image_path' => 'images/abaut.png',
     ],
     'programs' => [
-        'label' => 'Programs overview', 'group' => 'Main pages',
-        'eyebrow' => 'Our programs', 'title' => 'Support shaped around', 'highlight' => 'each family.',
+        'label' => 'Programmes overview', 'group' => 'Main pages',
+        'eyebrow' => 'Our programmes', 'title' => 'Support shaped around', 'highlight' => 'each family.',
         'intro' => 'Explore the practical, emotional and community support Children’s Hope Foundation provides for children with cancer and their caregivers.',
         'image_path' => 'images/chf-program-overview-garden.jpg',
     ],

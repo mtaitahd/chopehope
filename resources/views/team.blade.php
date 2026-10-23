@@ -55,7 +55,7 @@
                     <div class="team-card__body"><p class="eyebrow">{{ $member->role }}</p><h3>{{ $member->name }}</h3>@if($member->bio)<p class="team-card__bio">{{ $member->bio }}</p>@endif</div>
                 </article>
             @empty
-                <div class="team-empty"><h3>Connect with the CHF team</h3><p>For questions about our work, partnerships or supporting a family, please get in touch.</p><a class="button button--blue" href="{{ route('contact') }}">Contact our team</a></div>
+                <div class="team-empty"><h3>Connect with the CHF team</h3><p>For questions about our work, partnership opportunities or ways to support a family, please get in touch.</p><a class="button button--blue" href="{{ route('contact') }}">Contact our team</a></div>
             @endforelse
             </div>
         </div></section>

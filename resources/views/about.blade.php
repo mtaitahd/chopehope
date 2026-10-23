@@ -63,7 +63,7 @@
                     <h2 id="about-intro-title">What is CHF?</h2>
                     <p class="about-intro__subtitle">A Moshi-based foundation supporting children with cancer and their families.</p>
                     <div class="about-intro__prose">
-                        <p>Children's Hope Foundation (CHF) is a non-governmental organization based in Moshi, Kilimanjaro, Tanzania. We help ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
+                        <p>Children's Hope Foundation (CHF) is a non-governmental organisation based in Moshi, Kilimanjaro, Tanzania. We help ease the medical, emotional and financial pressures childhood cancer can place on children and their caregivers.</p>
                         <p>Through our Home Away from Home near the hospital, families can find free accommodation, nutritional support, transport, psychosocial care, play and education support while a child receives treatment.</p>
                     </div>
                 </div>
@@ -96,12 +96,12 @@
                 <div class="about-story__heading">
                     <p class="eyebrow"><span></span> Foundation history</p>
                     <h2 class="about-section-heading__title" id="about-story-title">A response to the long journey for care.</h2>
-                    <p>CHF's work is rooted in the challenges families can face when they must travel to reach specialized childhood cancer treatment.</p>
+                    <p>CHF's work is rooted in the challenges families can face when they must travel to reach specialised childhood cancer treatment.</p>
                 </div>
                 <div class="about-story__grid">
                     <div class="about-story__copy">
                         <h3>Making the path to treatment easier.</h3>
-                        <p>Specialized care is concentrated at hospitals including the nearby hospital. For families coming from distant communities, fares, meals and a safe place to stay can add strain to an already difficult time.</p>
+                        <p>Specialist care is concentrated at hospitals, including the one nearby. For families coming from distant communities, fares, meals and a safe place to stay can add strain to an already difficult time.</p>
                         <p>Children may need regular appointments and follow-up care. CHF helps bridge the distance between medical treatment and day-to-day family needs with a nearby support home and practical care.</p>
                         <p>Our work brings children and caregivers a place to rest, nourishing meals, transport to appointments and psychosocial support during the treatment journey.</p>
                     </div>
@@ -123,12 +123,12 @@
                     <article class="about-statement about-statement--vision">
                         <span class="about-statement__label">Our vision</span>
                         <h3>Accessible care for every child.</h3>
-                        <p>To see every child with cancer in Tanzania receive accessible, quality care in a safe and supportive environment.</p>
+                        <p>Our vision is for every child with cancer in Tanzania to receive accessible, quality care in a safe and supportive environment.</p>
                     </article>
                     <article class="about-statement about-statement--mission">
                         <span class="about-statement__label">Our mission</span>
                         <h3>Support throughout treatment and beyond.</h3>
-                        <p>To give hope, share love, and support children with cancer and their caregivers throughout the treatment journey and beyond.</p>
+                        <p>Our mission is to give hope, share love and support children with cancer and their caregivers throughout the treatment journey and beyond.</p>
                     </article>
                 </div>
             </div>

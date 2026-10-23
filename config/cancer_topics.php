@@ -14,7 +14,7 @@ return [
         'points' => [
             ['title' => 'Every diagnosis is different', 'text' => 'The name of the cancer and the child’s own test results guide the care plan.'],
             ['title' => 'Ask the care team', 'text' => 'Families can ask their child’s health professionals to explain unfamiliar words and next steps.'],
-            ['title' => 'Support includes family', 'text' => 'Children and caregivers may need emotional and practical support alongside medical care.'],
+            ['title' => 'Support for the family', 'text' => 'Children and caregivers may need emotional and practical support alongside medical care.'],
         ],
         'feature_title' => 'It is okay to ask questions.',
         'feature_text' => 'Write down questions and bring them to the child’s healthcare appointments. The care team can explain what the diagnosis means for that child.',
@@ -93,7 +93,7 @@ return [
         'intro' => 'CHF is a family support foundation, not a medical provider. For concerns about a child’s health, contact a qualified healthcare professional. To ask about CHF accommodation, meals, transport or psychosocial support, contact the foundation directly.',
         'points' => [
             ['title' => 'For medical concerns', 'text' => 'Speak with the child’s healthcare provider about assessment and medical referral.'],
-            ['title' => 'For CHF family support', 'text' => 'Ask CHF about support for children and caregivers during treatment in Moshi.'],
+            ['title' => 'Ask about CHF family support', 'text' => 'Ask CHF about support for children and caregivers during treatment in Moshi.'],
             ['title' => 'Share only what is needed', 'text' => 'When contacting CHF, ask first what information is needed to discuss available support.'],
         ],
         'feature_title' => 'A support contact for families.',
