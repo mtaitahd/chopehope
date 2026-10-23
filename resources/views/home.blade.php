@@ -253,6 +253,6 @@
         </div><a class="footer-to-top" href="#home" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a></div>
     </footer>
 
-    <script src="{{ asset('js/site.js') }}" defer></script>
+    <script src="{{ asset('js/site.js') }}?v={{ filemtime(public_path('js/site.js')) }}" defer></script>
 </body>
 </html>
