@@ -15,26 +15,15 @@ if (homeHero) {
         const showNextSlide = () => {
             const nextIndex = (currentIndex + 1) % slides.length;
             const nextSlide = slides[nextIndex];
-            const preload = new Image();
-
-            preload.onload = () => {
-                inactiveImage.src = preload.src;
-                inactiveImage.alt = nextSlide.alt;
-                inactiveImage.removeAttribute('aria-hidden');
-                activeImage.setAttribute('aria-hidden', 'true');
-                inactiveImage.classList.add('is-active');
-                activeImage.classList.remove('is-active');
-                [activeImage, inactiveImage] = [inactiveImage, activeImage];
-                currentIndex = nextIndex;
-                window.setTimeout(showNextSlide, 2000);
-            };
-
-            preload.onerror = () => {
-                currentIndex = nextIndex;
-                window.setTimeout(showNextSlide, 2000);
-            };
-
-            preload.src = nextSlide.src;
+            inactiveImage.src = nextSlide.src;
+            inactiveImage.alt = nextSlide.alt;
+            inactiveImage.removeAttribute('aria-hidden');
+            activeImage.setAttribute('aria-hidden', 'true');
+            inactiveImage.classList.add('is-active');
+            activeImage.classList.remove('is-active');
+            [activeImage, inactiveImage] = [inactiveImage, activeImage];
+            currentIndex = nextIndex;
+            window.setTimeout(showNextSlide, 2000);
         };
 
         window.setTimeout(showNextSlide, 2000);
