@@ -37,8 +37,16 @@
     @php($pageHero = \App\Support\PageHeroContent::get('home'))
 
     <main id="main-content">
-        <section class="hero" id="home" aria-labelledby="hero-title">
-            <img class="hero__image" src="{{ \App\Support\PageHeroContent::imageUrl($pageHero['image_path']) }}" alt="Children's Hope Foundation team members gathered outside their workplace in Moshi" fetchpriority="high">
+        @php($homeHeroSlides = [
+            ['src' => \App\Support\PageHeroContent::imageUrl($pageHero['image_path']), 'alt' => 'Children’s Hope Foundation team members gathered in Moshi'],
+            ['src' => asset('images/chf-hero-about-garden.jpeg'), 'alt' => 'CHF staff and children taking part in a garden activity'],
+            ['src' => asset('images/chf-hero-play-recreation-swings.jpg'), 'alt' => 'Children enjoying outdoor play with CHF caregivers'],
+            ['src' => asset('images/chf-hero-program-emotional-support.jpeg'), 'alt' => 'Children and caregivers sharing a support activity at CHF'],
+            ['src' => asset('images/chf-hero-service-accommodation.jpeg'), 'alt' => 'Accommodation at the CHF home for families during treatment'],
+        ])
+        <section class="hero" id="home" aria-labelledby="hero-title" data-home-hero data-home-hero-slides='@json($homeHeroSlides)'>
+            <img class="hero__image is-active" src="{{ $homeHeroSlides[0]['src'] }}" alt="{{ $homeHeroSlides[0]['alt'] }}" fetchpriority="high" data-home-hero-image>
+            <img class="hero__image" alt="" aria-hidden="true" data-home-hero-image>
             <div class="hero__veil" aria-hidden="true"></div>
             <div class="container hero__inner">
                 <div class="hero__copy">
